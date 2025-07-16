@@ -1,3 +1,4 @@
 baseURL = "https://hugospinat.github.io/slc-hugo/"
 languageCode = 'fr-FR'
 title = 'My New Hugo Site'
+theme = "PaperMod"
