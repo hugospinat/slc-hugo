@@ -2,6 +2,8 @@ backend:
   name: github
   repo: hugospinat/slc-hugo
   branch: main
+  auth_scope: repo
+  auth_endpoint: https://authenticating-git-user.vercel.app/api/auth
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
