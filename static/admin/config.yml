@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_scope: repo
   auth_endpoint: https://espinat.auth0.com/authorize
+  site_url: https://hugospinat.github.io/slc-hugo
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
