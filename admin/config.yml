@@ -3,7 +3,7 @@ backend:
   repo: hugospinat/slc-hugo
   branch: main
   auth_scope: repo
-  auth_endpoint: https://authenticating-git-user.vercel.app/api/auth
+  auth_endpoint: https://espinat.auth0.com/authorize
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
