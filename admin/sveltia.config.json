@@ -1,0 +1,14 @@
+{
+  "auth": {
+    "provider": "github",
+    "repo": "hugospinat/slc-hugo",
+    "branch": "main"
+  },
+  "content": {
+    "posts": {
+      "path": "content/posts",
+      "extension": ".md",
+      "fields": ["title", "date", "body"]
+    }
+  }
+}
