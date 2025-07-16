@@ -1,0 +1,1 @@
+-e '---\ntitle: "Accueil"\n---\nBienvenue sur le site du Syndicat du Logement et de la Consommation.' 
