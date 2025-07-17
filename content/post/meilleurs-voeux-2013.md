@@ -5,4 +5,4 @@ categories:
   - "defaut"
 ---
 
-[![VoeuxSLC2013V2_ALL](images/VoeuxSLC2013V2_ALL-1024x511.png)](http://www3.slc.asso.fr/?attachment_id=48)
+[VoeuxSLC2013V2_ALL](uploads/VoeuxSLC2013V2_ALL-1024x511.png)

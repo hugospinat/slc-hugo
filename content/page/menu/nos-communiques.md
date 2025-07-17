@@ -8,7 +8,7 @@ weight: 7
 Le SLC-CSF fait paraître régulièrement, des **communiqués de presse :**
 
 - [Le SLC-CSF lance la première action de groupe en matière de charges locatives](/uploads/CP-ActionGroupe-20141008-VF2.pdf) (Octobre 2014)
-- [Gel de l’APL : La CSF refuse que l’on fasse des économies sur le dos des plus modestes](http://www3.slc.asso.fr/?p=81 "Gel de l’APL : La CSF refuse que l’on fasse des économies sur le dos des plus modestes") (Octobre 2013)
+- [Gel de l’APL : La CSF refuse que l’on fasse des économies sur le dos des plus modestes](/post/la-csf-refuse-que-lon-fasse-des-economies-sur-le-dos-des-plus-modestes "Gel de l’APL : La CSF refuse que l’on fasse des économies sur le dos des plus modestes") (Octobre 2013)
 - [Paris Habitat : 1,650 millions d’euros de pénalités appliquées aux ascensoristes ;  150 000 euros restitués aux locataires !](/uploads/ComPressFAL2010.pdf) (Septembre 2010)
 - [Paris Habitat : deux augmentations de loyers en 6 mois !](/uploads/ComPressAugLoyer2010.pdf) (Mars 2010)
 - [Bonus pour Paris Habitat et les ascensoristes sur le dos des locataires](/uploads/ComPressPenaAscen2009.pdf) (Avril 2009)
