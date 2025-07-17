@@ -1,6 +1,8 @@
 ---
 title: "La concertation locative"
 date: 2012-12-29
+menu: main
+weight: 5
 ---
 
 **_Qu’est ce qu’un Plan de Concertation Locative (PCL) ?_**

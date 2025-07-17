@@ -1,6 +1,8 @@
 ---
 title: "Nous contacter"
 date: 2012-12-29
+menu: main
+weight: 10
 ---
 
 Le SLC-CSF tient régulièrement des **permanences téléphoniques**. L’objectif de ces permanences est de répondre aux questions, informer les usagers de leurs droits, les guider dans leurs démarches en cas de litiges (lettres, dossiers, références juridiques …).

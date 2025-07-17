@@ -1,6 +1,8 @@
 ---
 title: "Mentions légales"
 date: 2012-12-30
+menu: main
+weight: 13
 ---
 
 Les utilisateurs du site Internet sont tenus de respecter les dispositions de la loi relative à l'informatique, aux fichiers et aux libertés, dont la violation est passible de sanctions pénales.

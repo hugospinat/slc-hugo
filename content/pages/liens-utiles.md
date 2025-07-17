@@ -1,6 +1,8 @@
 ---
 title: "Liens utiles"
 date: 2012-12-29
+menu: main
+weight: 9
 ---
 
 [www.la-csf.org](http://www.la-csf.org/) : Confédération Syndicales des Familles – organisation nationale représentative dans le domaine du de Logement.

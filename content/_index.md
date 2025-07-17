@@ -1,5 +1,7 @@
 ---
 title: "Accueil"
+menu: main
+weight: 1
 ---
 
 Bienvenue sur le site du **Syndicat du Logement et de la Consommation (SLC)**.

@@ -1,6 +1,8 @@
 ---
 title: "Notre journal"
 date: 2012-12-29
+menu: main
+weight: 8
 ---
 
 Le SLC-CSF édite **un journal** “ Le Canard du SLC ”, strictement réservé en diffusion interne à ses adhérents, pour les informer de l’actualité des actions menées et des avancées en matière de logement social.

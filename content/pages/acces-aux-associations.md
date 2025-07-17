@@ -1,6 +1,8 @@
 ---
 title: "Accès aux associations"
 date: 2012-12-29
+menu: main
+weight: 12
 ---
 
 - Support de la réunion Paris Habitat du 24/02/2013 : [Réunion PH du 23 02 2013 Resp VF](http://www3.slc.asso.fr/?attachment_id=57)

@@ -1,6 +1,8 @@
 ---
 title: "Données personnelles"
 date: 2022-09-17
+menu: main
+weight: 14
 ---
 
 Dans le cadre de son activité, le SLC-CSF en sa qualité de responsable de traitement est amené à collecter et à traiter des données à caractère personnel. Les données personnelles recueillies permettent au SLC-CSF de gérer les adhésions, les demandes de contact et de soutien dans le cadre de litiges locatifs ou de consommation et transmettre de l’information sur ses actions. Les catégories de personnes concernées sont les adhérents, les personnes (locataires ou consommateurs) souhaitant être en contact avec le SLC-CSF ou recevoir des informations sur son action.
