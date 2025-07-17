@@ -6,16 +6,26 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content/page"
+  - name: "footer_pages"
+    label: "Pages Footer"
+    folder: "content/page/footer"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Menu", name: "menu", widget: "list", pattern: ['main', "footer",""] }
+      - { label: "Poids (ordre dans le footer)", name: "weight", widget: "number", default: 10 }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "menu_pages"
+    label: "Pages Menu Principal"
+    folder: "content/page/menu"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
       - { label: "Poids (ordre dans le menu)", name: "weight", widget: "number", default: 10 }
       - { label: "Contenu", name: "body", widget: "markdown" }
+
 
   - name: "postes"
     label: "Articles"
