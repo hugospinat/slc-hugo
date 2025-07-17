@@ -12,6 +12,7 @@ collections:
     folder: "content/page/menu"
     create: true
     slug: "{{slug}}"
+    sortable_fields: ["weight", "title"] # Ajout des champs triables
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Poids (ordre dans le menu)", name: "weight", widget: "number", default: 10 }
@@ -33,6 +34,7 @@ collections:
     folder: "content/page/footer"
     create: true
     slug: "{{slug}}"
+    sortable_fields: ["weight", "title"] # Ajout des champs triables
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Poids (ordre dans le footer)", name: "weight", widget: "number", default: 10 }
