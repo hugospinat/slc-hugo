@@ -6,7 +6,7 @@ hasCJKLanguage = false
 
 theme = "tranquilpeak"
 
-paginate = 10
+pagerSize  = 10
 canonifyURLs = true
 enableInlineShortcodes = true
 
