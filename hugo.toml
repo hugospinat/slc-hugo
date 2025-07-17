@@ -1,4 +1,4 @@
-baseURL = "https://hugospinat.github.io/slc-hugo/"
+baseURL = "https://slc-hugo.netlify.app/"
 languageCode = 'fr-FR'
 title = 'My New Hugo Site'
 theme = "PaperMod"
