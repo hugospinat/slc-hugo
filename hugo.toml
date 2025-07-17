@@ -12,3 +12,19 @@ disableKinds = ["taxonomy"]
 [Params.logo]
   image = "uploads/logo.jpg" # Logo image. Path relative to "static"
   subtitle = "Locataires, défendez vos droits avec le SLC-CSF !" # Logo subtitle
+
+[Params.sidebar]
+  home = false # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = "left" # Configure layout for single pages
+  widgets = [ "recent", "search" ]
+
+[Params.widgets]
+  recent_num = 10 # Set the number of articles in the "Recent articles" widget
+
+[Params.widgets.search]
+  cached = false # activate cache if true
+  url = "https://google.com/search"
+  [Params.widgets.search.input]
+    name = "sitesearch"
+    pre = ""
