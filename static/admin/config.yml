@@ -5,6 +5,7 @@ backend:
   base_url: https://api.netlify.com
   auth_endpoint: auth
   auth_scope: repo
+  site_id : 1b5112af-e4d3-4fb5-b454-edb526c52b40
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
