@@ -1,7 +1,14 @@
 baseURL = "https://slc-hugo.netlify.app/"
-languageCode = 'fr-FR'
-title = 'My New Hugo Site'
-theme = "PaperMod"
+languageCode = 'fr'
+title = 'Syndicat du Logement et de la Consommation'
+defaultContentLanguage = "fr"
+hasCJKLanguage = false
+
+theme = "tranquilpeak"
+
+paginate = 10
+canonifyURLs = true
+enableInlineShortcodes = true
 
 [menu]
 
