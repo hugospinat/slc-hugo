@@ -6,16 +6,5 @@ theme = "PaperMod"
 [menu]
 
   [[menu.main]]
-    identifier = "home"
-    name = "Accueil"
-    url = "/"
-    weight = 1
+    
 	
-[params]
-  ShowToc = true
-  ShowBreadCrumbs = true
-  ShowSidebar = true
-  ShowReadingTime = true
-
-  # Active la sidebar menu
-  ShowMenu = "sidebar"  # possible valeurs : "top", "sidebar"

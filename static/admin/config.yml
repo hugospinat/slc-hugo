@@ -24,3 +24,4 @@ collections:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { label: "Poids (ordre dans le menu)", name: "weight", widget: "number", default: 10 }
