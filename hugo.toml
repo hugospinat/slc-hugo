@@ -3,7 +3,7 @@ languageCode = 'fr'
 title = 'Syndicat du Logement et de la Consommation'
 defaultContentLanguage = "fr"
 
-theme = "mainroad"
+theme = "roadster"
 disableKinds = ["taxonomy"]
 
 [Params.style.vars]

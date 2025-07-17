@@ -10,3 +10,6 @@
 [submodule "themes/papermod-sidebar"]
 	path = themes/papermod-sidebar
 	url = https://github.com/AikenH/papermod-sidebar.git
+[submodule "themes/roadster"]
+	path = themes/roadster
+	url = https://github.com/mansoorbarri/roadster.git
