@@ -1,6 +1,8 @@
 ---
 title: "Contrôler les charges"
 date: 2012-12-29
+menu: main
+weight: 4
 ---
 
 Les locataires reçoivent annuellement de leur bailleur, un avis de régularisation des charges locatives pour leur immeuble, l’article 23 de la loi du 6 juillet 1989 stipulant que les charges récupérables sont “ exigibles sur justification ” et qu’ “ un mois avant cette régularisation, le bailleur en communique au locataire le décompte par nature de charges, ainsi que, dans les immeubles collectifs, le mode de répartition entre les locataires ”.

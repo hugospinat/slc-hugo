@@ -1,6 +1,8 @@
 ---
 title: "Nos diffusions"
 date: 2012-12-29
+menu: main
+weight: 6
 ---
 
 Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des locataires des groupes où il est présent :

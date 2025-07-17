@@ -1,6 +1,8 @@
 ---
 title: "Qui sommes-nous ?"
 date: 2012-12-29
+menu: main
+weight: 2
 ---
 
 Le Syndicat du Logement et de la Consommation (SLC-CSF) est une association – loi de 1901 qui œuvre pour la défense des droits et des intérêts des résidents sur toutes les questions concernant l’habitat, l’urbanisme, le cadre de vie et la consommation.
