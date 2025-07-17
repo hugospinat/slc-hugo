@@ -17,4 +17,4 @@ _Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données 
 
 Pour en savoir plus sur la gestion de vos données personnelles, cliquer ici (page [Données personnelles](http://www3.slc.asso.fr/?page_id=476 "Données personnelles"))
 
-Pour exercer vos droits, cliquer ici ([Formulaire d'exercice des droits](http://www3.slc.asso.fr/wp-content/uploads/2014/02/Formulaire-dexercice-des-droits.pdf))
+Pour exercer vos droits, cliquer ici ([Formulaire d'exercice des droits](/uploads/Formulaire-dexercice-des-droits.pdf))

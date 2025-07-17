@@ -9,6 +9,9 @@ disableKinds = ["taxonomy"]
 [Params.style.vars]
   highlightColor = "#4088b8"         # Couleur principale (bleu par défaut)
 
+[params]
+  # CustomHeadHTML = '<link rel="icon" href="/favicon.ico" type="image/x-icon">'
+
 [Params.logo]
   image = "img/logo.jpg" # Logo image. Path relative to "static"
   subtitle = "Locataires, défendez vos droits avec le SLC-CSF !" # Logo subtitle

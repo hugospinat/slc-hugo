@@ -144,7 +144,7 @@ La personne concernée a le droit de définir des directives particulières rela
 
 **Exercice des droits**
 
-Pour toute information ou exercice de vos droits Informatique et Libertés sur les traitements de données personnelles gérés par le SLC-CSF vous pouvez compléter ce formulaire : [Formulaire d'exercice des droits](http://www3.slc.asso.fr/wp-content/uploads/2014/02/Formulaire-dexercice-des-droits.pdf)
+Pour toute information ou exercice de vos droits Informatique et Libertés sur les traitements de données personnelles gérés par le SLC-CSF vous pouvez compléter ce formulaire : [Formulaire d'exercice des droits](/uploads/Formulaire-dexercice-des-droits.pdf)
 
 Il doit être retourné signé par courrier postal à SLC-CSF : 4 place de la Porte de Bagnolet ou par mail : [info@slc.asso.fr](mailto:info@slc.asso.fr)
 
