@@ -1,7 +1,7 @@
 ---
 title: "Mentions légales"
 date: 2012-12-30
-menu: main
+menu: footer
 weight: 13
 ---
 

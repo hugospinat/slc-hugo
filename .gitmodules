@@ -4,3 +4,9 @@
 [submodule "themes/tranquilpeak"]
 	path = themes/tranquilpeak
 	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
+[submodule "themes/hugo-theme-stack"]
+	path = themes/hugo-theme-stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack.git
+[submodule "themes/papermod-sidebar"]
+	path = themes/papermod-sidebar
+	url = https://github.com/AikenH/papermod-sidebar.git

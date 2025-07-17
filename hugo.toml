@@ -2,19 +2,13 @@ baseURL = "https://slc-hugo.netlify.app/"
 languageCode = 'fr'
 title = 'Syndicat du Logement et de la Consommation'
 defaultContentLanguage = "fr"
-hasCJKLanguage = false
 
-theme = "tranquilpeak"
-canonifyURLs = true
-enableInlineShortcodes = true
+theme = "mainroad"
+disableKinds = ["taxonomy"]
 
-[pagination]
-  pagerSize = 10
+[Params.style.vars]
+  highlightColor = "#4088b8"         # Couleur principale (bleu par défaut)
 
-[params]
-  author = "SLC"
-  subtitle = "Site officiel du Syndicat du Logement et de la Consommation"
-  description = "Association de défense des locataires"
-  keywords = ["syndicat", "logement", "consommation", "association"]
-  since = 1977
-  enableSidebar = true
+[Params.logo]
+  image = "img/logo.jpg" # Logo image. Path relative to "static"
+  subtitle = "Locataires, défendez vos droits avec le SLC-CSF !" # Logo subtitle
