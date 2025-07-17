@@ -5,13 +5,16 @@ defaultContentLanguage = "fr"
 hasCJKLanguage = false
 
 theme = "tranquilpeak"
-
-pagerSize  = 10
 canonifyURLs = true
 enableInlineShortcodes = true
 
-[menu]
+[pagination]
+  pagerSize = 10
 
-  [[menu.main]]
-    
-	
+[params]
+  author = "SLC"
+  subtitle = "Site officiel du Syndicat du Logement et de la Consommation"
+  description = "Association de défense des locataires"
+  keywords = ["syndicat", "logement", "consommation", "association"]
+  since = 1977
+  enableSidebar = true
