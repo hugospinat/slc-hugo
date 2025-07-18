@@ -6,6 +6,9 @@ defaultContentLanguage = "fr"
 theme = "mainroad"
 disableKinds = ["taxonomy"]
 
+[Params]
+  post_meta = [ "date"]
+
 [Params.style.vars]
   highlightColor = "#4088b8"         # Couleur principale (bleu par défaut)
 
@@ -23,8 +26,7 @@ disableKinds = ["taxonomy"]
   recent_num = 10 # Set the number of articles in the "Recent articles" widget
 
 [Params.widgets.search]
-  cached = false # activate cache if true
-  url = "https://google.com/search"
+  url = "https://duckduckgo.com/"
   [Params.widgets.search.input]
-    name = "sitesearch"
+    name = "sites"
     pre = ""
