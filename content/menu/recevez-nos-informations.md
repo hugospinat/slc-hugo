@@ -1,6 +1,5 @@
 ---
 title: Recevoir nos informations
-date: 2014-02-08
 menu: main
 weight: 11
 ---

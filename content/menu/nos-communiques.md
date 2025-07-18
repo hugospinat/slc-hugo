@@ -1,6 +1,5 @@
 ---
 title: "Nos communiqués"
-date: 2012-12-29
 menu: main
 weight: 7
 ---

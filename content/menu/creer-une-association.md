@@ -1,6 +1,5 @@
 ---
 title: Créer une association
-date: 2012-12-29
 menu: main
 weight: 3
 ---

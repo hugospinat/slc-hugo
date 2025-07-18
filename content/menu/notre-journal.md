@@ -1,6 +1,5 @@
 ---
 title: "Notre journal"
-date: 2012-12-29
 menu: main
 weight: 8
 ---

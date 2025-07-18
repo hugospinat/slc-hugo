@@ -1,6 +1,5 @@
 ---
 title: Qui sommes-nous ?
-date: 2012-12-29
 menu: main
 weight: 2
 ---

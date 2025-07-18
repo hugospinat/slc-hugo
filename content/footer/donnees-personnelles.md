@@ -1,6 +1,5 @@
 ---
 title: "Données personnelles"
-date: 2022-09-17
 menu: footer
 weight: 14
 ---
