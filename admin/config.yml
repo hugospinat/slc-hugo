@@ -9,7 +9,7 @@ collections:
 
   - name: "menu_pages"
     label: "Pages Menu Principal"
-    folder: "content/page/menu"
+    folder: "content/menu"
     create: true
     slug: "{{slug}}"
     sortable_fields: ["weight", "title"] # Ajout des champs triables
@@ -31,7 +31,7 @@ collections:
 
   - name: "footer_pages"
     label: "Pages Footer"
-    folder: "content/page/footer"
+    folder: "content/footer"
     create: true
     slug: "{{slug}}"
     sortable_fields: ["weight", "title"] # Ajout des champs triables
