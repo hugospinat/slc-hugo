@@ -30,3 +30,6 @@ disableKinds = ["taxonomy"]
   [Params.widgets.search.input]
     name = "sites"
     pre = ""
+    
+[markup.goldmark.renderer]
+  unsafe = true
