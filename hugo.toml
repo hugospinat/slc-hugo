@@ -1,4 +1,4 @@
-baseURL = "https://slc-hugo.netlify.app/"
+baseURL = "https://slc.asso.fr/"
 languageCode = 'fr'
 title = 'Syndicat du Logement et de la Consommation'
 defaultContentLanguage = "fr"
