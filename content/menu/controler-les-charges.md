@@ -10,11 +10,14 @@ Le contrôle des charges locatives est donc un droit fondamental du locataire: c
 
 ***Qui peut contrôler les charges ?***
 
-\- le locataire individuellement, dans un délai de 6 mois après réception de son avis de régularisation annuelle, - une association représentative des locataires, à n’importe quel moment.
+* le locataire individuellement, dans un délai de 6 mois après réception de son avis de régularisation annuelle,
+* une association représentative des locataires, à n’importe quel moment.
 
 Un contrôle de charges demeure un travail très complexe pour les non-initiés. L’assistance d’une organisation compétente s’avère souvent indispensable, et cela constitue une des actions majeures du Syndicat auprès de ses responsables d’associations SLC-CSF.
 
-***Sur quoi porte le contrôle de charges ?*** Le contrôle de charges porte sur les charges de l’année écoulée. Les locataires doivent vérifier si les charges qui leur ont été facturées sont justifiées.
+***Sur quoi porte le contrôle de charges ?***
+
+Le contrôle de charges porte sur les charges de l’année écoulée. Les locataires doivent vérifier si les charges qui leur ont été facturées sont justifiées.
 
 Il faut pour cela contrôler que :\
 • les prestations ont été correctement facturées,\
