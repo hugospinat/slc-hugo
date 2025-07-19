@@ -4,3 +4,8 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.148.1"  # (ou celle que tu veux, ex: 0.111.3)
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

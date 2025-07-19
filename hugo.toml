@@ -13,7 +13,7 @@ disableKinds = ["taxonomy"]
   highlightColor = "#4088b8"         # Couleur principale (bleu par défaut)
 
 [Params.logo]
-  image = "uploads/logo.jpg" # Logo image. Path relative to "static"
+  image = "images/logo.jpg" # Logo image. Path relative to "static"
   subtitle = "Locataires, défendez vos droits avec le SLC-CSF !" # Logo subtitle
 
 [Params.sidebar]
@@ -30,8 +30,7 @@ disableKinds = ["taxonomy"]
   [Params.widgets.search.input]
     name = "sites"
     pre = ""
-[params.image]
-lazyLoading = false  
+  
 
 [markup.goldmark.renderer]
   unsafe = true
