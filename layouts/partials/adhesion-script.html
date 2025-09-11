@@ -1,0 +1,56 @@
+<script>
+  // Render associations and attach checkout handlers
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('assos');
+    if (!container) return;
+
+    const escapeHtml = (str) => String(str).replace(/[&<>"']/g, (s) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[s]));
+
+    fetch('https://n8n.slc.asso.fr/webhook-test/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
+      .then((res) => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        if (!Array.isArray(data)) return;
+        data.forEach((asso) => {
+          const id = `btn-${asso.asso_id}`;
+          const amount = (Number(asso.min_amount || 0) / 100).toFixed(2);
+          const item = document.createElement('div');
+          item.innerHTML = `
+            <strong>${escapeHtml(asso.description || '')}</strong>
+            - Montant minimum : ${amount} €
+            <button id="${id}">Adhérer</button>
+          `;
+          container.appendChild(item);
+
+          const btn = document.getElementById(id);
+          if (!btn) return;
+          btn.addEventListener('click', () => {
+            fetch('https://n8n.slc.asso.fr/webhook/create-checkout', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                asso_id: asso.asso_id,
+                price: asso.min_amount,
+                description: asso.description
+              })
+            })
+              .then((r) => {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+              })
+              .then((resp) => {
+                if (resp && resp.checkout_url) {
+                  window.location.href = resp.checkout_url;
+                }
+              })
+              .catch((err) => console.error('Erreur checkout:', err));
+          });
+        });
+      })
+      .catch((err) => console.error('Erreur chargement associations:', err));
+  });
+</script>
