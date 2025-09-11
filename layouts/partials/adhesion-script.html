@@ -1,56 +1,349 @@
+<style>
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    font-size: 1rem;
+    transition: box-shadow 0.15s ease, border-color 0.2s ease;
+}
+
+#assos {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+#assos .widget {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* très léger */
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none; /* suppression bord gris */
+}
+
+#assos .widget__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#assos .widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#assos .post__title {
+    margin: 0 0 1rem;
+    color: var(--highlightColor, #4088b8);
+}
+
+#assos .post__lead {
+    margin: 0 0 1.5rem;
+    font-size: 1.1rem;
+    flex: 1;
+}
+
+#assos .btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--highlightColor, #4088b8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+#assos .btn:hover {
+    background: var(--highlightColorHover, #3476a3);
+}
+
+/* Modal styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-overlay .modal {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 6px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 8px 30px rgba(16,24,40,0.06); /* ombre plus douce et moins grise */
+    border: none;
+}
+
+.modal__close {
+    float: right;
+    background: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Bleu et gras pour le texte important */
+.modal__title,
+.modal__min-value {
+    color: var(--highlightColor, #4088b8);
+    font-weight: 700;
+}
+
+/* Montant minimum visible */
+.modal__min {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Montant input */
+.modal__amount {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .75rem 0;
+}
+
+.modal__amount input {
+    width: 120px;
+    padding: .4rem .6rem;
+    border: none;
+    border-radius: 4px;
+    background: #fafafa;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+}
+
+/* Taxe/info */
+.modal__tax-info {
+    font-size: .95rem;
+    color: #444;
+    margin-bottom: .75rem;
+}
+
+/* Boutons de la modal : arrondis et bleu */
+.modal__buttons {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+    margin-top: .5rem;
+}
+
+.modal__buttons .btn {
+    /* use the same rounded-rectangle style as the global .btn */
+    border-radius: 4px;
+    background: var(--highlightColor, #4088b8);
+    padding: 0.5rem 1rem;
+    border: none;
+}
+.modal__buttons .btn:hover {
+    background: var(--highlightColorHover, #3476a3);
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    #assos {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+</style>
+
+<!-- Modal HTML -->
+<div class="modal-overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal__close" aria-label="Fermer">&times;</button>
+    <h3 id="modal-title" class="modal__title">Montant de votre adhésion</h3>
+    <div class="modal__content">
+      <p>Vous pouvez choisir de donner plus que le montant minimum pour soutenir nos actions.</p>
+
+      <!-- Montant minimum rappelé ici -->
+      <p class="modal__min">Montant minimum : <strong class="modal__min-value" aria-live="polite"></strong> €</p>
+
+      <div class="modal__amount">
+        <label for="amount">Montant :</label>
+        <input type="number" id="amount" min="0" step="1" aria-label="Montant en euros">
+        <span>€</span>
+      </div>
+      <div class="modal__tax-info">
+        66% du montant de votre adhésion est déductible des impôts.
+      </div>
+    </div>
+    <div class="modal__buttons">
+      <button class="btn" id="modal-cancel" type="button">Annuler</button>
+      <button class="btn" id="modal-confirm" type="button">Confirmer</button>
+    </div>
+  </div>
+</div>
+
 <script>
-  // Render associations and attach checkout handlers
-  document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('assos');
-    if (!container) return;
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.getElementById('assos');
+  if (!container) return;
 
-    const escapeHtml = (str) => String(str).replace(/[&<>"']/g, (s) => ({
-      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-    }[s]));
+  // Modal elements
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const modalClose = document.querySelector('.modal__close');
+  const modalCancel = document.getElementById('modal-cancel');
+  const modalConfirm = document.getElementById('modal-confirm');
+  const amountInput = document.getElementById('amount');
+  const minValueEl = document.querySelector('.modal__min-value');
+  let currentAsso = null;
 
-    fetch('https://n8n.slc.asso.fr/webhook-test/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
-      .then((res) => {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
+  // Always work with integer euros for display/input.
+  const parseMinInt = (v) => {
+    const n = Number(v || 0);
+    return Math.ceil(isNaN(n) ? 0 : n);
+  };
+
+  const showModal = (asso) => {
+    currentAsso = asso;
+    const minInt = parseMinInt(asso.min_amount);
+    if (amountInput) {
+      amountInput.step = 1;
+      amountInput.value = String(minInt);
+      amountInput.min = String(minInt);
+    }
+    if (minValueEl) minValueEl.textContent = String(minInt);
+    if (modalOverlay) {
+      modalOverlay.classList.add('open');
+      modalOverlay.setAttribute('aria-hidden', 'false');
+    }
+    if (amountInput) amountInput.focus();
+  };
+
+  const hideModal = () => {
+    currentAsso = null;
+    if (modalOverlay) {
+      modalOverlay.classList.remove('open');
+      modalOverlay.setAttribute('aria-hidden', 'true');
+    }
+  };
+
+  if (modalClose) modalClose.addEventListener('click', hideModal);
+  if (modalCancel) modalCancel.addEventListener('click', hideModal);
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) hideModal();
+    });
+  }
+
+  if (modalConfirm) {
+    modalConfirm.addEventListener('click', () => {
+      if (!currentAsso) return;
+      const raw = parseInt(amountInput.value, 10);
+      if (Number.isNaN(raw)) {
+        alert('Montant invalide');
+        return;
+      }
+      // always send cents = integer euros * 100
+      const amountCents = raw * 100;
+
+      const minRequiredInt = parseMinInt(currentAsso.min_amount);
+      const minRequiredCents = minRequiredInt * 100;
+      if (amountCents < minRequiredCents) {
+        alert('Le montant doit être supérieur ou égal au minimum requis.');
+        return;
+      }
+
+      fetch('https://n8n.slc.asso.fr/webhook/8e091ce5-2748-4f51-9419-042fe666706d', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          asso_id: currentAsso.asso_id,
+          price: amountCents,
+          description: currentAsso.description
+        })
       })
-      .then((data) => {
-        if (!Array.isArray(data)) return;
-        data.forEach((asso) => {
-          const id = `btn-${asso.asso_id}`;
-          const amount = (Number(asso.min_amount || 0) / 100).toFixed(2);
-          const item = document.createElement('div');
-          item.innerHTML = `
-            <strong>${escapeHtml(asso.description || '')}</strong>
-            - Montant minimum : ${amount} €
-            <button id="${id}">Adhérer</button>
-          `;
-          container.appendChild(item);
+      .then(res => res.json())
+      .then(resp => {
+        window.location.href = resp.checkout_url; // redirection vers Stripe
+      })
+      .catch(err => console.error(err));
+    });
+  }
 
-          const btn = document.getElementById(id);
-          if (!btn) return;
-          btn.addEventListener('click', () => {
-            fetch('https://n8n.slc.asso.fr/webhook/create-checkout', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                asso_id: asso.asso_id,
-                price: asso.min_amount,
-                description: asso.description
-              })
-            })
-              .then((r) => {
-                if (!r.ok) throw new Error('HTTP ' + r.status);
-                return r.json();
-              })
-              .then((resp) => {
-                if (resp && resp.checkout_url) {
-                  window.location.href = resp.checkout_url;
-                }
-              })
-              .catch((err) => console.error('Erreur checkout:', err));
-          });
+  // Create and insert search box
+  const searchContainer = document.createElement('div');
+  searchContainer.className = 'search-container';
+  searchContainer.innerHTML = `
+    <input 
+      type="text" 
+      id="asso-search" 
+      placeholder="Rechercher une association..."
+      aria-label="Rechercher une association"
+    >
+  `;
+  container.parentNode.insertBefore(searchContainer, container);
+
+  const filterAssos = (searchTerm) => {
+    const items = container.getElementsByClassName('widget');
+    const term = searchTerm.toLowerCase().trim();
+    Array.from(items).forEach(item => {
+      const titleEl = item.querySelector('.post__title');
+      const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+      item.style.display = title.includes(term) ? '' : 'none';
+    });
+  };
+
+  const searchInput = document.getElementById('asso-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => filterAssos(e.target.value));
+  }
+
+  const escapeHtml = (str) => String(str).replace(/[&<>'"\n]/g, (s) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;', '\n': '<br>'
+  }[s]));
+
+  // Fetch associations
+  fetch('https://n8n.slc.asso.fr/webhook/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
+    .then((res) => {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then((data) => {
+      if (!Array.isArray(data)) {
+        console.error('Données inattendues', data);
+        return;
+      }
+      data.forEach((asso) => {
+        const id = `btn-${asso.asso_id}`;
+        const amountEurosInt = parseMinInt(asso.min_amount);
+        const item = document.createElement('div');
+        item.className = 'widget post clearfix';
+        item.innerHTML = `
+          <div class="widget__content post__content">
+            <h3 class="post__title">${escapeHtml(asso.description || '')}</h3>
+            <p class="post__lead">Montant minimum : ${amountEurosInt} €</p>
+            <button id="${id}" class="widget__link-btn btn" type="button">Adhérer</button>
+          </div>
+        `;
+        container.appendChild(item);
+
+        const btn = item.querySelector(`#${id}`);
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          showModal(asso);
         });
-      })
-      .catch((err) => console.error('Erreur chargement associations:', err));
-  });
+      });
+    })
+    .catch((err) => console.error('Erreur chargement associations:', err));
+});
 </script>
