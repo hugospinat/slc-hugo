@@ -2,33 +2,15 @@
 title: Adhésions
 weight: 10
 ---
-{{< rawhtml >}}
+<div id="assos"></div>
 
-<!DOCTYPE html>
+<script>
 
-<html lang="fr">
+fetch('https://n8n.slc.asso.fr/webhook-test/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
 
-<head>
+  .then(res => res.json())
 
-  <meta charset="UTF-8">
-
-  <title>Adhésion Associations</title>
-
-</head>
-
-<body>
-
-  <h1>Adhérer à une association</h1>
-
-  <div id="assos"></div>
-
-  <script>
-
-\    fetch('https://n8n.slc.asso.fr/webhook-test/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
-
-\    .then(res => res.json())
-
-\    .then(data => {
+  .then(data => {
 
 \    const container = document.getElementById('assos');
 
@@ -72,14 +54,8 @@ weight: 10
 
 \    });
 
-\    })
+  })
 
-\    .catch(err => console.error(err));
+  .catch(err => console.error(err));
 
-  </script>
-
-</body>
-
-</html>
-
-{{< /rawhtml >}}
+</script>
