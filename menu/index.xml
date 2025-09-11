@@ -81,60 +81,180 @@
 &lt;iframe data-tally-src="https://tally.so/embed/nGOYyo?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="409" frameborder="0" marginheight="0" marginwidth="0" title="Formulaire de contact"&gt;&lt;/iframe&gt;
 &lt;script&gt;var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}&lt;/script&gt;
 &lt;p&gt;Le présent consentement est valide tant et aussi longtemps qu’il est nécessaire à la finalité poursuivie par le traitement mis en œuvre par le SLC-CSF dans la mesure où il n’a pas fait l’objet d’un retrait.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité la transmission/diffusion d’information et la gestion de sa communication (y compris de propagande électorale).&lt;/em&gt; &lt;em&gt;Le SLC-CSF conserve les données transmises via ce formulaire tant que la personne concernée ne retire pas son consentement à la réception d’information.&lt;/em&gt; Vous pouvez exercer votre droit de retrait de consentement en écrivant à &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Adhésions</title><link>https://slc.asso.fr/menu/adh%C3%A9sions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/adh%C3%A9sions/</guid><description>&lt;div id="assos"&gt;&lt;/div&gt;
-&lt;script&gt;
+&lt;p&gt;&lt;em&gt;Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité la transmission/diffusion d’information et la gestion de sa communication (y compris de propagande électorale).&lt;/em&gt; &lt;em&gt;Le SLC-CSF conserve les données transmises via ce formulaire tant que la personne concernée ne retire pas son consentement à la réception d’information.&lt;/em&gt; Vous pouvez exercer votre droit de retrait de consentement en écrivant à &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Adhésions</title><link>https://slc.asso.fr/menu/adh%C3%A9sions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/adh%C3%A9sions/</guid><description>&lt;h1 id="la-page-est-en-cours-de-création-et-nest-pas-encore-opérationnel"&gt;La page est en cours de création et n&amp;rsquo;est pas encore opérationnel.&lt;/h1&gt;
+&lt;div id="assos"&gt;&lt;/div&gt;
+&lt;style&gt;
+.search-container {
+ margin-bottom: 2rem;
+}
+
+.search-container input {
+ width: 100%;
+ padding: 0.8rem;
+ border: none;
+ border-radius: 4px;
+ background: #fff;
+ box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+ font-size: 1rem;
+ transition: box-shadow 0.15s ease, border-color 0.2s ease;
+}
+
+#assos {
+ display: grid;
+ gap: 2rem;
+ margin: 2rem 0;
+}
+
+#assos .widget {
+ background: #fff;
+ padding: 1.5rem;
+ border-radius: 4px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04); 
+ transition: transform 0.2s ease-in-out;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ border: none; 
+}
+
+#assos .widget__content {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+}
+
+#assos .widget:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#assos .post__title {
+ margin: 0 0 1rem;
+ color: var(--highlightColor, #4088b8);
+}
+
+#assos .post__lead {
+ margin: 0 0 1.5rem;
+ font-size: 1.1rem;
+ flex: 1;
+}
+
+#assos .btn {
+ display: inline-block;
+ padding: 0.5rem 1.5rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ transition: background 0.2s ease;
+}
+
+#assos .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+}
+
  
- document.addEventListener('DOMContentLoaded', function () {
- const container = document.getElementById('assos');
- if (!container) return;
+.modal-overlay {
+ display: none;
+ position: fixed;
+ inset: 0;
+ background: rgba(0,0,0,0.5);
+ align-items: center;
+ justify-content: center;
+ z-index: 1000;
+}
 
- const escapeHtml = (str) =&gt; String(str).replace(/[&amp;&lt;&gt;"']/g, (s) =&gt; ({
- '&amp;': '&amp;amp;', '&lt;': '&amp;lt;', '&gt;': '&amp;gt;', '"': '&amp;quot;', "'": '&amp;#39;'
- }[s]));
+.modal-overlay .modal {
+ background: #fff;
+ padding: 1.25rem;
+ border-radius: 6px;
+ max-width: 480px;
+ width: 90%;
+ box-shadow: 0 8px 30px rgba(16,24,40,0.06); 
+ border: none;
+}
 
- fetch('https://n8n.slc.asso.fr/webhook-test/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
- .then((res) =&gt; {
- if (!res.ok) throw new Error('HTTP ' + res.status);
- return res.json();
- })
- .then((data) =&gt; {
- if (!Array.isArray(data)) return;
- data.forEach((asso) =&gt; {
- const id = `btn-${asso.asso_id}`;
- const amount = (Number(asso.min_amount || 0) / 100).toFixed(2);
- const item = document.createElement('div');
- item.innerHTML = `
- &lt;strong&gt;${escapeHtml(asso.description || '')}&lt;/strong&gt;
- - Montant minimum : ${amount} €
- &lt;button id="${id}"&gt;Adhérer&lt;/button&gt;
- `;
- container.appendChild(item);
+.modal__close {
+ float: right;
+ background: transparent;
+ border: 0;
+ font-size: 1.5rem;
+ cursor: pointer;
+}
 
- const btn = document.getElementById(id);
- if (!btn) return;
- btn.addEventListener('click', () =&gt; {
- fetch('https://n8n.slc.asso.fr/webhook/create-checkout', {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({
- asso_id: asso.asso_id,
- price: asso.min_amount,
- description: asso.description
- })
- })
- .then((r) =&gt; {
- if (!r.ok) throw new Error('HTTP ' + r.status);
- return r.json();
- })
- .then((resp) =&gt; {
- if (resp &amp;&amp; resp.checkout_url) {
- window.location.href = resp.checkout_url;
+ 
+.modal__title,
+.modal__min-value {
+ color: var(--highlightColor, #4088b8);
+ font-weight: 700;
+}
+
+ 
+.modal__min {
+ margin: 0.5rem 0;
+ font-size: 1rem;
+}
+
+ 
+.modal__amount {
+ display: flex;
+ align-items: center;
+ gap: .5rem;
+ margin: .75rem 0;
+}
+
+.modal__amount input {
+ width: 120px;
+ padding: .4rem .6rem;
+ border: none;
+ border-radius: 4px;
+ background: #fafafa;
+ box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
+}
+
+ 
+.modal__tax-info {
+ font-size: .95rem;
+ color: #444;
+ margin-bottom: .75rem;
+}
+
+ 
+.modal__buttons {
+ display: flex;
+ gap: .5rem;
+ justify-content: flex-end;
+ margin-top: .5rem;
+}
+
+.modal__buttons .btn {
+ 
+ border-radius: 4px;
+ background: var(--highlightColor, #4088b8);
+ padding: 0.5rem 1rem;
+ border: none;
+}
+.modal__buttons .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+}
+
+.modal-overlay.open {
+ display: flex;
+}
+
+@media (min-width: 768px) {
+ #assos {
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
  }
- })
- .catch((err) =&gt; console.error('Erreur checkout:', err));
- });
- });
- })
- .catch((err) =&gt; console.error('Erreur chargement associations:', err));
- });
-&lt;/script&gt;</description></item></channel></rss>
+}
+&lt;/style&gt;
+
+
+&lt;div class="modal-overlay" aria-hidden="true"&gt;
+ &lt;div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"&gt;
+ &lt;button class="modal__close" aria-label="Fermer"&gt;&amp;times;&lt;/button&gt;
+ &lt;h3 id="modal-title" class="modal__title"&gt;Montant de votre adhésion&lt;/h3&gt;
+ &lt;div class="modal__content"&gt;
+ &lt;p&gt;Vous pouvez choisir de donner plus que le montant minimum pour soutenir nos actions.&lt;/p&gt;</description></item></channel></rss>
