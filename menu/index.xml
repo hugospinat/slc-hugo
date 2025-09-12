@@ -173,6 +173,30 @@ a.btn:focus {
  margin: 2rem 0;
 }
 
+ 
+@keyframes slc-spin { to { transform: rotate(360deg); } }
+#assos .loading {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: .5rem;
+ min-height: 120px;
+ color: var(--highlightColor, #4088b8);
+}
+#assos .loading .spinner {
+ width: 18px; height: 18px;
+ border: 2px solid currentColor;
+ border-bottom-color: transparent;
+ border-radius: 50%;
+ animation: slc-spin .8s linear infinite;
+}
+#assos .loading-error {
+ color: #b00020;
+ background: #fff3f3;
+ border-radius: 4px;
+ padding: 1rem;
+}
+
 #assos .asso-card {
  background: #fff;
  padding: 1.5rem;
@@ -257,8 +281,7 @@ a.btn:focus {
  font-size: 1.5rem;
  cursor: pointer;
 }
-.modal__title,
-.modal__min-value {
+.modal__title {
  color: var(--highlightColor, #4088b8);
  font-weight: 700;
 }
@@ -295,7 +318,7 @@ a.btn:focus {
  &lt;h3 id="modal-title" class="modal__title"&gt;Montant de votre adhésion&lt;/h3&gt;
  &lt;div class="modal__content"&gt;
  &lt;p&gt;
- Pour soutenir nos actions, vous pouvez choisir de donner plus que le montant d'adhésion de
+ Pour soutenir les actions du SLC, vous pouvez choisir de nous donner plus que le montant d'adhésion de
  &lt;strong class="modal__min-value" aria-live="polite"&gt;&lt;/strong&gt; €.
  &lt;br /&gt;Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu imposable. Un reçu vous sera envoyé par email ou par courrier.
  &lt;/p&gt;</description></item></channel></rss>

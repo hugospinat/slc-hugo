@@ -175,6 +175,30 @@ a.btn:focus {
  margin: 2rem 0;
 }
 
+ 
+@keyframes slc-spin { to { transform: rotate(360deg); } }
+#assos .loading {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: .5rem;
+ min-height: 120px;
+ color: var(--highlightColor, #4088b8);
+}
+#assos .loading .spinner {
+ width: 18px; height: 18px;
+ border: 2px solid currentColor;
+ border-bottom-color: transparent;
+ border-radius: 50%;
+ animation: slc-spin .8s linear infinite;
+}
+#assos .loading-error {
+ color: #b00020;
+ background: #fff3f3;
+ border-radius: 4px;
+ padding: 1rem;
+}
+
 #assos .asso-card {
  background: #fff;
  padding: 1.5rem;
@@ -259,8 +283,7 @@ a.btn:focus {
  font-size: 1.5rem;
  cursor: pointer;
 }
-.modal__title,
-.modal__min-value {
+.modal__title {
  color: var(--highlightColor, #4088b8);
  font-weight: 700;
 }
@@ -297,7 +320,7 @@ a.btn:focus {
  &lt;h3 id="modal-title" class="modal__title"&gt;Montant de votre adhésion&lt;/h3&gt;
  &lt;div class="modal__content"&gt;
  &lt;p&gt;
- Pour soutenir nos actions, vous pouvez choisir de donner plus que le montant d'adhésion de
+ Pour soutenir les actions du SLC, vous pouvez choisir de nous donner plus que le montant d'adhésion de
  &lt;strong class="modal__min-value" aria-live="polite"&gt;&lt;/strong&gt; €.
  &lt;br /&gt;Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu imposable. Un reçu vous sera envoyé par email ou par courrier.
  &lt;/p&gt;</description></item><item><title>Décès de Pierre SPINAT, président fondateur du syndicat</title><link>https://slc.asso.fr/post/deces-de-pierre-spinat-president-fondateur-du-syndicat/</link><pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/deces-de-pierre-spinat-president-fondateur-du-syndicat/</guid><description>&lt;p&gt;&lt;strong&gt;C’est avec une grande tristesse que nous vous annonçons le décès de Pierre Spinat le 17 janvier 2025 à 85 ans.&lt;/strong&gt; Engagé depuis plus de 40 ans, Président fondateur du syndicat, administrateur de la RIVP depuis le décembre 2014 et représentant du SLC-CSF, il a su transformer une petite association de locataires en première organisation de locataires chez les bailleurs sociaux parisiens. Militant infatigable défenseur du logement social, il était reconnu de tous (bailleurs &amp;amp; organisations de locataires) pour son engagement, sa compétence et son intégrité ;  il a su faire valoir les intérêts des locataires sans relâche jusqu&amp;rsquo;à ses derniers jours. &lt;strong&gt;L&amp;rsquo;ensemble du syndicat et ses associations présentent leurs plus sincères condoléances à la famille.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Plan climat : les locataires remboursés de près de 500 000 €</title><link>https://slc.asso.fr/post/plan-climat-les-locataires-rembourses-de-pres-de-500-000-e/</link><pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/plan-climat-les-locataires-rembourses-de-pres-de-500-000-e/</guid><description>&lt;p&gt;Suite a l&amp;rsquo;action résolue du SLC, les locataires de 4 groupes ont été rembourses de près de 500 000 € indument perçus par Paris Habitat et leur contribution au Plan Climat ajustée a la baisse. Consultez les informations diffusées aux locataires :&lt;/p&gt;
