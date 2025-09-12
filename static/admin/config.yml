@@ -6,7 +6,6 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-
   - name: "menu_pages"
     label: "Pages Menu Principal"
     folder: "content/menu"
@@ -15,9 +14,14 @@ collections:
     sortable_fields: ["weight", "title"] # Ajout des champs triables
     fields:
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Poids (ordre dans le menu)", name: "weight", widget: "number", default: 10 }
+      - { label: "Menu", name: "menu", widget: "hidden", default: "main" }
+      - {
+          label: "Poids (ordre dans le menu)",
+          name: "weight",
+          widget: "number",
+          default: 10,
+        }
       - { label: "Contenu", name: "body", widget: "markdown" }
-
 
   - name: "postes"
     label: "Articles"
@@ -37,5 +41,11 @@ collections:
     sortable_fields: ["weight", "title"] # Ajout des champs triables
     fields:
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Poids (ordre dans le footer)", name: "weight", widget: "number", default: 10 }
+      - { label: "Menu", name: "menu", widget: "hidden", default: "footer" }
+      - {
+          label: "Poids (ordre dans le footer)",
+          name: "weight",
+          widget: "number",
+          default: 10,
+        }
       - { label: "Contenu", name: "body", widget: "markdown" }
