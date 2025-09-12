@@ -14,3 +14,9 @@
   for = "/favicon.ico"
   [headers.values]
     Cache-Control = "public, max-age=86400, immutable"
+
+[[redirects]]
+  from = "https://adhesion.slc.asso.fr/*"
+  to = "https://slc.asso.fr/menu/adh%C3%A9sions/"
+  status = 301
+  force = true
