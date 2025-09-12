@@ -1,0 +1,103 @@
+<style>
+.btn {
+	display: inline-block;
+	padding: 0.5rem 1.5rem;
+	background: var(--highlightColor, #4088b8);
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.2s ease;
+}
+.btn:hover {
+	background: var(--highlightColorHover, #3476a3);
+}
+
+a.btn {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+a.btn:hover,
+a.btn:focus {
+  text-decoration: none;
+}
+
+/* Grille 2 colonnes pour les cartes */
+.cards-2col {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .cards-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Hauteur uniforme + bouton aligné en bas et plein largeur */
+.cards-2col .widget {
+  display: flex;           /* remplace height:100% */
+}
+.cards-2col .widget__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;                 /* prend toute la hauteur de la carte */
+}
+
+/* Marges cohérentes des textes */
+.cards-2col .post__title {
+  margin: 0 0 .5rem;
+}
+.cards-2col .post__lead {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+  min-height: 3em;         /* réserve ~2 lignes pour aligner visuellement */
+}
+
+/* Bouton en bas et même largeur */
+.cards-2col .widget__content .btn {
+  margin-top: auto;        /* pousse en bas */
+  align-self: stretch;     /* pleine largeur */
+  text-align: center;
+}
+</style>
+
+<div class="cards-2col">
+  <div class="widget post clearfix">
+    <div class="widget__content post__content">
+      <h3 class="post__title">Je suis un adhérent individuel</h3>
+      <p class="post__lead">Je ne suis pas rattaché à un groupe ayant une association de locataires affiliée au SLC.</p>
+      <a class="btn" href="/menu/adhesion-individuelle/">Adhérer individuellement</a>
+    </div>
+  </div>
+
+  <div class="widget post clearfix">
+    <div class="widget__content post__content">
+      <h3 class="post__title">Je suis sur un groupe ayant une association de locataires affiliée au SLC</h3>
+      <p class="post__lead">Je fais partie d’un groupe disposant d’une association affiliée au SLC.</p>
+      <a class="btn" href="/menu/trouver-mon-association/">Trouver mon association</a>
+    </div>
+  </div>
+</div>
+
+{{ partial "adhesion-modal-core.html" . }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const individualLink = document.querySelector('a.btn[href^="/menu/adhesion-individuelle/"]');
+  if (!individualLink) return;
+
+  // Open the same modal for individual adhesion with fixed asso_id and minimum
+  individualLink.addEventListener('click', function(e) {
+    // If you want to keep navigation as fallback, only preventDefault when API exists
+    if (window.SLCAdhesion && typeof window.SLCAdhesion.showModal === 'function') {
+      e.preventDefault();
+      window.SLCAdhesion.showModal({
+        asso_id: 30,
+        min_amount: 33,
+        description: 'Adhésion individuelle'
+      });
+    }
+  });
+});
+</script>
