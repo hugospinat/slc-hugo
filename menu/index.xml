@@ -81,7 +81,75 @@
 &lt;iframe data-tally-src="https://tally.so/embed/nGOYyo?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="409" frameborder="0" marginheight="0" marginwidth="0" title="Formulaire de contact"&gt;&lt;/iframe&gt;
 &lt;script&gt;var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}&lt;/script&gt;
 &lt;p&gt;Le présent consentement est valide tant et aussi longtemps qu’il est nécessaire à la finalité poursuivie par le traitement mis en œuvre par le SLC-CSF dans la mesure où il n’a pas fait l’objet d’un retrait.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité la transmission/diffusion d’information et la gestion de sa communication (y compris de propagande électorale).&lt;/em&gt; &lt;em&gt;Le SLC-CSF conserve les données transmises via ce formulaire tant que la personne concernée ne retire pas son consentement à la réception d’information.&lt;/em&gt; Vous pouvez exercer votre droit de retrait de consentement en écrivant à &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Adhésions</title><link>https://slc.asso.fr/menu/adh%C3%A9sions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/adh%C3%A9sions/</guid><description>&lt;h1 id="la-page-est-en-cours-de-création-et-nest-pas-encore-opérationnel"&gt;La page est en cours de création et n&amp;rsquo;est pas encore opérationnel.&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité la transmission/diffusion d’information et la gestion de sa communication (y compris de propagande électorale).&lt;/em&gt; &lt;em&gt;Le SLC-CSF conserve les données transmises via ce formulaire tant que la personne concernée ne retire pas son consentement à la réception d’information.&lt;/em&gt; Vous pouvez exercer votre droit de retrait de consentement en écrivant à &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Adhésions</title><link>https://slc.asso.fr/menu/adh%C3%A9sions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/adh%C3%A9sions/</guid><description>&lt;style&gt;
+.btn {
+	display: inline-block;
+	padding: 0.5rem 1.5rem;
+	background: var(--highlightColor, #4088b8);
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.2s ease;
+}
+.btn:hover {
+	background: var(--highlightColorHover, #3476a3);
+}
+
+a.btn {
+ color: #fff !important;
+ text-decoration: none !important;
+}
+a.btn:hover,
+a.btn:focus {
+ text-decoration: none;
+}
+
+ 
+.cards-2col {
+ display: grid;
+ gap: 1.5rem;
+}
+@media (min-width: 768px) {
+ .cards-2col {
+ grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+ 
+.cards-2col .widget {
+ display: flex; 
+}
+.cards-2col .widget__content {
+ display: flex;
+ flex-direction: column;
+ flex: 1; 
+}
+
+ 
+.cards-2col .post__title {
+ margin: 0 0 .5rem;
+}
+.cards-2col .post__lead {
+ margin: 0 0 1rem;
+ line-height: 1.5;
+ min-height: 3em; 
+}
+
+ 
+.cards-2col .widget__content .btn {
+ margin-top: auto; 
+ align-self: stretch; 
+ text-align: center;
+}
+&lt;/style&gt;
+
+&lt;div class="cards-2col"&gt;
+ &lt;div class="widget post clearfix"&gt;
+ &lt;div class="widget__content post__content"&gt;
+ &lt;h3 class="post__title"&gt;Je suis un adhérent individuel&lt;/h3&gt;
+ &lt;p class="post__lead"&gt;Je ne suis pas rattaché à un groupe ayant une association de locataires affiliée au SLC.&lt;/p&gt;</description></item><item><title>Trouver mon association</title><link>https://slc.asso.fr/menu/trouver-mon-association/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/trouver-mon-association/</guid><description>&lt;p&gt;Recherchez votre association de locataires affiliée au SLC et adhérez en ligne.&lt;/p&gt;
 &lt;div id="assos"&gt;&lt;/div&gt;
 &lt;style&gt;
 .search-container {
@@ -105,35 +173,28 @@
  margin: 2rem 0;
 }
 
-#assos .widget {
+#assos .asso-card {
  background: #fff;
  padding: 1.5rem;
  border-radius: 4px;
- box-shadow: 0 1px 3px rgba(0,0,0,0.04); 
+ box-shadow: 0 1px 3px rgba(0,0,0,0.04);
  transition: transform 0.2s ease-in-out;
  height: 100%;
  display: flex;
  flex-direction: column;
- border: none; 
 }
 
-#assos .widget__content {
- flex: 1;
- display: flex;
- flex-direction: column;
-}
-
-#assos .widget:hover {
+#assos .asso-card:hover {
  transform: translateY(-2px);
  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-#assos .post__title {
+#assos h3 {
  margin: 0 0 1rem;
  color: var(--highlightColor, #4088b8);
 }
 
-#assos .post__lead {
+#assos p {
  margin: 0 0 1.5rem;
  font-size: 1.1rem;
  flex: 1;
@@ -156,6 +217,21 @@
 }
 
  
+#assos .asso-card .btn {
+ margin-top: auto;
+}
+
+ 
+
+@media (min-width: 768px) {
+ #assos {
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ }
+}
+&lt;/style&gt;
+
+&lt;style&gt;
+ 
 .modal-overlay {
  display: none;
  position: fixed;
@@ -165,17 +241,15 @@
  justify-content: center;
  z-index: 1000;
 }
-
 .modal-overlay .modal {
  background: #fff;
  padding: 1.25rem;
  border-radius: 6px;
  max-width: 480px;
  width: 90%;
- box-shadow: 0 8px 30px rgba(16,24,40,0.06); 
+ box-shadow: 0 8px 30px rgba(16,24,40,0.06);
  border: none;
 }
-
 .modal__close {
  float: right;
  background: transparent;
@@ -183,28 +257,13 @@
  font-size: 1.5rem;
  cursor: pointer;
 }
-
- 
 .modal__title,
 .modal__min-value {
  color: var(--highlightColor, #4088b8);
  font-weight: 700;
 }
-
- 
-.modal__min {
- margin: 0.5rem 0;
- font-size: 1rem;
-}
-
- 
-.modal__amount {
- display: flex;
- align-items: center;
- gap: .5rem;
- margin: .75rem 0;
-}
-
+.modal__min { margin: 0.5rem 0; font-size: 1rem; }
+.modal__amount { display: flex; align-items: center; gap: .5rem; margin: .75rem 0; }
 .modal__amount input {
  width: 120px;
  padding: .4rem .6rem;
@@ -213,42 +272,20 @@
  background: #fafafa;
  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
 }
-
- 
-.modal__tax-info {
- font-size: .95rem;
- color: #444;
- margin-bottom: .75rem;
-}
-
- 
-.modal__buttons {
- display: flex;
- gap: .5rem;
- justify-content: flex-end;
- margin-top: .5rem;
-}
-
+.modal__buttons { display: flex; gap: .5rem; justify-content: flex-end; margin-top: .5rem; }
 .modal__buttons .btn {
- 
- border-radius: 4px;
+ display: inline-block;
+ padding: 0.5rem 1.5rem;
  background: var(--highlightColor, #4088b8);
- padding: 0.5rem 1rem;
+ color: #fff;
  border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ transition: background 0.2s ease;
 }
-.modal__buttons .btn:hover {
- background: var(--highlightColorHover, #3476a3);
-}
-
-.modal-overlay.open {
- display: flex;
-}
-
-@media (min-width: 768px) {
- #assos {
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- }
-}
+.modal__buttons .btn:hover { background: var(--highlightColorHover, #3476a3); }
+.modal-overlay.open { display: flex; }
 &lt;/style&gt;
 
 
@@ -257,4 +294,8 @@
  &lt;button class="modal__close" aria-label="Fermer"&gt;&amp;times;&lt;/button&gt;
  &lt;h3 id="modal-title" class="modal__title"&gt;Montant de votre adhésion&lt;/h3&gt;
  &lt;div class="modal__content"&gt;
- &lt;p&gt;Vous pouvez choisir de donner plus que le montant minimum pour soutenir nos actions.&lt;/p&gt;</description></item></channel></rss>
+ &lt;p&gt;
+ Pour soutenir nos actions, vous pouvez choisir de donner plus que le montant d'adhésion de
+ &lt;strong class="modal__min-value" aria-live="polite"&gt;&lt;/strong&gt; €.
+ &lt;br /&gt;Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu imposable. Un reçu vous sera envoyé par email ou par courrier.
+ &lt;/p&gt;</description></item></channel></rss>
