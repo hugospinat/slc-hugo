@@ -20,6 +20,30 @@
     margin: 2rem 0;
 }
 
+/* Loading indicator inside the list */
+@keyframes slc-spin { to { transform: rotate(360deg); } }
+#assos .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 120px;
+  color: var(--highlightColor, #4088b8);
+}
+#assos .loading .spinner {
+  width: 18px; height: 18px;
+  border: 2px solid currentColor;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: slc-spin .8s linear infinite;
+}
+#assos .loading-error {
+  color: #b00020;
+  background: #fff3f3;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
 #assos .asso-card {
   background: #fff;
   padding: 1.5rem;
@@ -117,14 +141,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }[s]));
 
   // Fetch associations
+  container.setAttribute('aria-busy', 'true');
+  container.innerHTML = `
+    <div class="loading" role="status" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Chargement des associations…</span>
+    </div>
+  `;
   fetch('https://n8n.slc.asso.fr/webhook/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
     .then((res) => {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     })
     .then((data) => {
+      container.removeAttribute('aria-busy');
+      container.textContent = '';
       if (!Array.isArray(data)) {
         console.error('Données inattendues', data);
+        container.innerHTML = '<p class="loading-error">Impossible d\'afficher la liste pour le moment.</p>';
+        return;
+      }
+      if (data.length === 0) {
+        container.innerHTML = '<p>Aucune association trouvée.</p>';
         return;
       }
       data.forEach((asso) => {
@@ -146,7 +184,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     })
-    .catch((err) => console.error('Erreur chargement associations:', err));
+    .catch((err) => {
+      console.error('Erreur chargement associations:', err);
+      container.removeAttribute('aria-busy');
+      container.innerHTML = '<p class="loading-error">Erreur de chargement des associations.</p>';
+    });
 });
 
  

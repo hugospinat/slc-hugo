@@ -25,8 +25,7 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-.modal__title,
-.modal__min-value {
+.modal__title {
   color: var(--highlightColor, #4088b8);
   font-weight: 700;
 }
@@ -63,7 +62,7 @@
     <h3 id="modal-title" class="modal__title">Montant de votre adhésion</h3>
     <div class="modal__content">
       <p>
-        Pour soutenir nos actions, vous pouvez choisir de donner plus que le montant d'adhésion de
+        Pour soutenir les actions du SLC, vous pouvez choisir de nous donner plus que le montant d'adhésion de
         <strong class="modal__min-value" aria-live="polite"></strong> €.
         <br />Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu imposable. Un reçu vous sera envoyé par email ou par courrier.
       </p>
@@ -104,7 +103,11 @@ window.SLCAdhesion = window.SLCAdhesion || {};
   function updateNetDisplay(v) {
     if (!netValueEl) return;
     const intV = Number.isNaN(parseInt(v, 10)) ? 0 : parseInt(v, 10);
-    netValueEl.textContent = String(Math.round(intV * 0.34));
+    // Compute net (= 34% of amount) in cents using integer math to avoid float rounding
+    const netCents = intV * 34; // v euros -> v*34 cents
+    const euros = Math.floor(netCents / 100);
+    const cents = Math.abs(netCents % 100);
+    netValueEl.textContent = euros + ',' + String(cents).padStart(2, '0');
   }
 
   function showModal(asso) {
@@ -113,9 +116,12 @@ window.SLCAdhesion = window.SLCAdhesion || {};
     if (amountInput) {
       amountInput.step = 1;
       amountInput.min = String(minInt);
+      // Clear value on each open (user must type the amount)
+      amountInput.value = '';
     }
     if (minValueEl) minValueEl.textContent = String(minInt);
-    updateNetDisplay(minInt);
+    // Reset net display to 0 when opening
+    updateNetDisplay(0);
 
     if (modalOverlay) {
       modalOverlay.classList.add('open');
