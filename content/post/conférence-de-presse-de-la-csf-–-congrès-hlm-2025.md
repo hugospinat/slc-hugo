@@ -12,7 +12,7 @@ Au programme :
 - Présentation des résultats de l’étude par **Tennessee Garcia**, coordinateur de la CSF Métropole Lyon/Rhône, aux côtés d’**Hélène Schwien** (Université Lyon 2, sous la direction de Loïc Bonneval).  
 - Intervention de **Manuel Domergue**, directeur des études à la Fondation pour le Logement des Défavorisés, sur les enjeux et préconisations.
 
-[Consulter le communiqué complet en PDF](static/uploads/conf_de_presse_24092025.pdf)
+[Consulter le communiqué complet en PDF](/uploads/conf_de_presse_24092025.pdf)
 
 ---
 
