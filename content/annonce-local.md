@@ -1,5 +1,5 @@
 ---
-title: Annonce local
+title: Partage d'un local associatif
 date: 2025-09-23T16:57:00.000+02:00
 categories:
   - defaut
