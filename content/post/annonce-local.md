@@ -1,8 +1,8 @@
 ---
-title: "Annonce local"
-date: 2005-01-11
-categories: 
-  - "defaut"
+title: Annonce local
+date: 2025-09-23T16:57:00.000+02:00
+categories:
+  - defaut
 ---
 
 Nous recherchons une ASSOCIATION engagée dans l’Economie Sociale et Solidaire pour partager nos espaces de travail (contre indemnité), afin de créer une dynamique collective et collaborative, dans le cadre d’une volonté de coopération et d’optimisation des ressources entre structures associatives.
