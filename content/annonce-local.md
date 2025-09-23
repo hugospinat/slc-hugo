@@ -11,6 +11,14 @@ pour partager nos espaces de travail (contre indemnité), afin de créer une dyn
 
 ---
 
+### Qui sommes nous ?
+
+Le Syndicat du Logement et de la Consommation (SLC-CSF) est une association – loi de 1901 qui œuvre pour la défense des droits et des intérêts des résidents sur toutes les questions concernant l’habitat, l’urbanisme, le cadre de vie et la consommation.
+
+[En savoir plus](/menu/qui-sommes-nous)
+
+---
+
 ### Ce que nous proposons
 
 - **Un ou deux bureaux et/ou une grande salle**
