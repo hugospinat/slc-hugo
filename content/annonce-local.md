@@ -35,6 +35,7 @@ pour partager nos espaces de travail (contre indemnité), afin de créer une dyn
 
 ### Pour candidater
 
+Nous contacter à l'adresse **info@slc.asso.fr**.
 Merci de préparer un dossier comprenant :
 - Présentation de votre association
 - Statuts
