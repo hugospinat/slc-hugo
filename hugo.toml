@@ -4,7 +4,6 @@ title = 'Syndicat du Logement et de la Consommation'
 defaultContentLanguage = "fr"
 
 theme = "mainroad"
-disableKinds = ["taxonomy"]
 
 [Params]
   post_meta = [ "date"]
