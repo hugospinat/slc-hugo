@@ -152,79 +152,87 @@ a.btn:focus {
  &lt;p class="post__lead"&gt;Je ne suis pas rattaché à un groupe ayant une association de locataires affiliée au SLC.&lt;/p&gt;</description></item><item><title>Trouver mon association</title><link>https://slc.asso.fr/menu/trouver-mon-association/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/trouver-mon-association/</guid><description>&lt;p&gt;Recherchez votre association de locataires affiliée au SLC et adhérez en ligne.&lt;/p&gt;
 &lt;div id="assos"&gt;&lt;/div&gt;
 &lt;style&gt;
-.search-container {
+ .search-container {
  margin-bottom: 2rem;
-}
+ }
 
-.search-container input {
+ .search-container input {
  width: 100%;
  padding: 0.8rem;
  border: none;
  border-radius: 4px;
  background: #fff;
- box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+ box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
  font-size: 1rem;
  transition: box-shadow 0.15s ease, border-color 0.2s ease;
-}
+ }
 
-#assos {
+ #assos {
  display: grid;
  gap: 2rem;
  margin: 2rem 0;
-}
+ }
 
  
-@keyframes slc-spin { to { transform: rotate(360deg); } }
-#assos .loading {
+ @keyframes slc-spin {
+ to {
+ transform: rotate(360deg);
+ }
+ }
+
+ #assos .loading {
  display: flex;
  align-items: center;
  justify-content: center;
  gap: .5rem;
  min-height: 120px;
  color: var(--highlightColor, #4088b8);
-}
-#assos .loading .spinner {
- width: 18px; height: 18px;
+ }
+
+ #assos .loading .spinner {
+ width: 18px;
+ height: 18px;
  border: 2px solid currentColor;
  border-bottom-color: transparent;
  border-radius: 50%;
  animation: slc-spin .8s linear infinite;
-}
-#assos .loading-error {
+ }
+
+ #assos .loading-error {
  color: #b00020;
  background: #fff3f3;
  border-radius: 4px;
  padding: 1rem;
-}
+ }
 
-#assos .asso-card {
+ #assos .asso-card {
  background: #fff;
  padding: 1.5rem;
  border-radius: 4px;
- box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
  transition: transform 0.2s ease-in-out;
  height: 100%;
  display: flex;
  flex-direction: column;
-}
+ }
 
-#assos .asso-card:hover {
+ #assos .asso-card:hover {
  transform: translateY(-2px);
- box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
 
-#assos h3 {
+ #assos h3 {
  margin: 0 0 1rem;
  color: var(--highlightColor, #4088b8);
-}
+ }
 
-#assos p {
+ #assos p {
  margin: 0 0 1.5rem;
  font-size: 1.1rem;
  flex: 1;
-}
+ }
 
-#assos .btn {
+ #assos .btn {
  display: inline-block;
  padding: 0.5rem 1.5rem;
  background: var(--highlightColor, #4088b8);
@@ -234,69 +242,90 @@ a.btn:focus {
  cursor: pointer;
  font-weight: bold;
  transition: background 0.2s ease;
-}
+ }
 
-#assos .btn:hover {
+ #assos .btn:hover {
  background: var(--highlightColorHover, #3476a3);
-}
+ }
 
  
-#assos .asso-card .btn {
+ #assos .asso-card .btn {
  margin-top: auto;
-}
+ }
 
  
 
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
  #assos {
  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
  }
-}
+ }
 &lt;/style&gt;
 
 &lt;style&gt;
  
-.modal-overlay {
+ .modal-overlay {
  display: none;
  position: fixed;
  inset: 0;
- background: rgba(0,0,0,0.5);
+ background: rgba(0, 0, 0, 0.5);
  align-items: center;
  justify-content: center;
  z-index: 1000;
-}
-.modal-overlay .modal {
+ }
+
+ .modal-overlay .modal {
  background: #fff;
  padding: 1.25rem;
  border-radius: 6px;
  max-width: 480px;
  width: 90%;
- box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+ box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
  border: none;
-}
-.modal__close {
+ }
+
+ .modal__close {
  float: right;
  background: transparent;
  border: 0;
  font-size: 1.5rem;
  cursor: pointer;
-}
-.modal__title {
+ }
+
+ .modal__title {
  color: var(--highlightColor, #4088b8);
  font-weight: 700;
-}
-.modal__min { margin: 0.5rem 0; font-size: 1rem; }
-.modal__amount { display: flex; align-items: center; gap: .5rem; margin: .75rem 0; }
-.modal__amount input {
+ }
+
+ .modal__min {
+ margin: 0.5rem 0;
+ font-size: 1rem;
+ }
+
+ .modal__amount {
+ display: flex;
+ align-items: center;
+ gap: .5rem;
+ margin: .75rem 0;
+ }
+
+ .modal__amount input {
  width: 120px;
  padding: .4rem .6rem;
  border: none;
  border-radius: 4px;
  background: #fafafa;
- box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
-}
-.modal__buttons { display: flex; gap: .5rem; justify-content: flex-end; margin-top: .5rem; }
-.modal__buttons .btn {
+ box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+ }
+
+ .modal__buttons {
+ display: flex;
+ gap: .5rem;
+ justify-content: flex-end;
+ margin-top: .5rem;
+ }
+
+ .modal__buttons .btn {
  display: inline-block;
  padding: 0.5rem 1.5rem;
  background: var(--highlightColor, #4088b8);
@@ -306,9 +335,15 @@ a.btn:focus {
  cursor: pointer;
  font-weight: bold;
  transition: background 0.2s ease;
-}
-.modal__buttons .btn:hover { background: var(--highlightColorHover, #3476a3); }
-.modal-overlay.open { display: flex; }
+ }
+
+ .modal__buttons .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+ }
+
+ .modal-overlay.open {
+ display: flex;
+ }
 &lt;/style&gt;
 
 
@@ -320,5 +355,6 @@ a.btn:focus {
  &lt;p&gt;
  Pour soutenir les actions du SLC, vous pouvez choisir de nous donner plus que le montant d'adhésion de
  &lt;strong class="modal__min-value" aria-live="polite"&gt;&lt;/strong&gt; €.
- &lt;br /&gt;Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu imposable. Un reçu vous sera envoyé par email ou par courrier.
+ &lt;br /&gt;Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu
+ imposable. Un reçu vous sera envoyé par email ou par courrier.
  &lt;/p&gt;</description></item></channel></rss>
