@@ -1,58 +1,85 @@
 <style>
-/* Modal styles (reusable) */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-.modal-overlay .modal {
-  background: #fff;
-  padding: 1.25rem;
-  border-radius: 6px;
-  max-width: 480px;
-  width: 90%;
-  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
-  border: none;
-}
-.modal__close {
-  float: right;
-  background: transparent;
-  border: 0;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.modal__title {
-  color: var(--highlightColor, #4088b8);
-  font-weight: 700;
-}
-.modal__min { margin: 0.5rem 0; font-size: 1rem; }
-.modal__amount { display: flex; align-items: center; gap: .5rem; margin: .75rem 0; }
-.modal__amount input {
-  width: 120px;
-  padding: .4rem .6rem;
-  border: none;
-  border-radius: 4px;
-  background: #fafafa;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
-}
-.modal__buttons { display: flex; gap: .5rem; justify-content: flex-end; margin-top: .5rem; }
-.modal__buttons .btn {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  background: var(--highlightColor, #4088b8);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-.modal__buttons .btn:hover { background: var(--highlightColorHover, #3476a3); }
-.modal-overlay.open { display: flex; }
+  /* Modal styles (reusable) */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-overlay .modal {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 6px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+    border: none;
+  }
+
+  .modal__close {
+    float: right;
+    background: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .modal__title {
+    color: var(--highlightColor, #4088b8);
+    font-weight: 700;
+  }
+
+  .modal__min {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .modal__amount {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .75rem 0;
+  }
+
+  .modal__amount input {
+    width: 120px;
+    padding: .4rem .6rem;
+    border: none;
+    border-radius: 4px;
+    background: #fafafa;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+  }
+
+  .modal__buttons {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+    margin-top: .5rem;
+  }
+
+  .modal__buttons .btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--highlightColor, #4088b8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+  }
+
+  .modal__buttons .btn:hover {
+    background: var(--highlightColorHover, #3476a3);
+  }
+
+  .modal-overlay.open {
+    display: flex;
+  }
 </style>
 
 <!-- Reusable Modal HTML -->
@@ -64,119 +91,121 @@
       <p>
         Pour soutenir les actions du SLC, vous pouvez choisir de nous donner plus que le montant d'adhésion de
         <strong class="modal__min-value" aria-live="polite"></strong> €.
-        <br />Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu imposable. Un reçu vous sera envoyé par email ou par courrier.
+        <br />Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu
+        imposable. Un reçu vous sera envoyé par email ou par courrier.
       </p>
       <div class="modal__amount">
         <label for="amount">Montant :</label>
         <input type="number" id="amount" min="0" step="1" inputmode="numeric" aria-label="Montant en euros">
         <span>€</span>
       </div>
-      <p class="modal__net">Après déduction fiscale, votre don vous revient à environ <strong class="modal__net-value"></strong> €.</p>
+      <p class="modal__net">Après déduction fiscale, votre don vous revient à environ <strong
+          class="modal__net-value"></strong> €.</p>
     </div>
     <div class="modal__buttons">
       <button class="btn" id="modal-cancel" type="button">Annuler</button>
       <button class="btn" id="modal-confirm" type="button">Confirmer</button>
     </div>
   </div>
- </div>
+</div>
 
 <script>
-// Expose a minimal global API to reuse the modal everywhere
-window.SLCAdhesion = window.SLCAdhesion || {};
+  // Expose a minimal global API to reuse the modal everywhere
+  window.SLCAdhesion = window.SLCAdhesion || {};
 
-(function() {
-  const modalOverlay = document.querySelector('.modal-overlay');
-  const modalClose = document.querySelector('.modal__close');
-  const modalCancel = document.getElementById('modal-cancel');
-  const modalConfirm = document.getElementById('modal-confirm');
-  const amountInput = document.getElementById('amount');
-  const minValueEl = document.querySelector('.modal__min-value');
-  const netValueEl = document.querySelector('.modal__net-value');
+  (function () {
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalClose = document.querySelector('.modal__close');
+    const modalCancel = document.getElementById('modal-cancel');
+    const modalConfirm = document.getElementById('modal-confirm');
+    const amountInput = document.getElementById('amount');
+    const minValueEl = document.querySelector('.modal__min-value');
+    const netValueEl = document.querySelector('.modal__net-value');
 
-  const parseMinInt = (v) => {
-    const n = Number(v || 0);
-    return Math.ceil(isNaN(n) ? 0 : n);
-  };
+    const parseMinInt = (v) => {
+      const n = Number(v || 0);
+      return Math.ceil(isNaN(n) ? 0 : n);
+    };
 
-  const state = { asso: null };
+    const state = { asso: null };
 
-  function updateNetDisplay(v) {
-    if (!netValueEl) return;
-    const intV = Number.isNaN(parseInt(v, 10)) ? 0 : parseInt(v, 10);
-    // Compute net (= 34% of amount) in cents using integer math to avoid float rounding
-    const netCents = intV * 34; // v euros -> v*34 cents
-    const euros = Math.floor(netCents / 100);
-    const cents = Math.abs(netCents % 100);
-    netValueEl.textContent = euros + ',' + String(cents).padStart(2, '0');
-  }
-
-  function showModal(asso) {
-    state.asso = asso || {};
-    const minInt = parseMinInt(state.asso.min_amount);
-    if (amountInput) {
-      amountInput.step = 1;
-      amountInput.min = String(minInt);
-      // Clear value on each open (user must type the amount)
-      amountInput.value = '';
+    function updateNetDisplay(v) {
+      if (!netValueEl) return;
+      const intV = Number.isNaN(parseInt(v, 10)) ? 0 : parseInt(v, 10);
+      // Compute net (= 34% of amount) in cents using integer math to avoid float rounding
+      const netCents = intV * 34; // v euros -> v*34 cents
+      const euros = Math.floor(netCents / 100);
+      const cents = Math.abs(netCents % 100);
+      netValueEl.textContent = euros + ',' + String(cents).padStart(2, '0');
     }
-    if (minValueEl) minValueEl.textContent = String(minInt);
-    // Reset net display to 0 when opening
-    updateNetDisplay(0);
 
-    if (modalOverlay) {
-      modalOverlay.classList.add('open');
-      modalOverlay.setAttribute('aria-hidden', 'false');
-    }
-    if (amountInput) amountInput.focus();
-  }
-
-  function hideModal() {
-    state.asso = null;
-    if (modalOverlay) {
-      modalOverlay.classList.remove('open');
-      modalOverlay.setAttribute('aria-hidden', 'true');
-    }
-  }
-
-  // Wire basic events
-  if (modalClose) modalClose.addEventListener('click', hideModal);
-  if (modalCancel) modalCancel.addEventListener('click', hideModal);
-  if (modalOverlay) modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) hideModal(); });
-  if (amountInput) amountInput.addEventListener('input', (e) => {
-    let v = parseInt(e.target.value, 10);
-    if (Number.isNaN(v)) v = 0;
-    e.target.value = String(v);
-    updateNetDisplay(v);
-  });
-
-  if (modalConfirm) {
-    modalConfirm.addEventListener('click', () => {
-      if (!state.asso) return;
-      const raw = parseInt(amountInput.value, 10);
-      if (Number.isNaN(raw)) { alert('Montant invalide'); return; }
-      const amountCents = raw * 100;
-      const minRequiredInt = parseMinInt(state.asso.min_amount);
-      if (amountCents < minRequiredInt * 100) {
-        alert('Le montant doit être supérieur ou égal au minimum requis.');
-        return;
+    function showModal(asso) {
+      state.asso = asso || {};
+      const minInt = parseMinInt(state.asso.min_amount);
+      if (amountInput) {
+        amountInput.step = 1;
+        amountInput.min = String(minInt);
+        // Clear value on each open (user must type the amount)
+        amountInput.value = '';
       }
-      fetch('https://n8n.slc.asso.fr/webhook/8e091ce5-2748-4f51-9419-042fe666706d', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          asso_id: state.asso.asso_id,
-          price: amountCents,
-          description: state.asso.description || 'Adhésion',
-        })
-      })
-      .then(res => res.json())
-      .then(resp => { window.location.href = resp.checkout_url; })
-      .catch(err => console.error(err));
-    });
-  }
+      if (minValueEl) minValueEl.textContent = String(minInt);
+      // Reset net display to 0 when opening
+      updateNetDisplay(0);
 
-  // Publish API
-  window.SLCAdhesion.showModal = showModal;
-  window.SLCAdhesion.hideModal = hideModal;
-})();
+      if (modalOverlay) {
+        modalOverlay.classList.add('open');
+        modalOverlay.setAttribute('aria-hidden', 'false');
+      }
+      if (amountInput) amountInput.focus();
+    }
+
+    function hideModal() {
+      state.asso = null;
+      if (modalOverlay) {
+        modalOverlay.classList.remove('open');
+        modalOverlay.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    // Wire basic events
+    if (modalClose) modalClose.addEventListener('click', hideModal);
+    if (modalCancel) modalCancel.addEventListener('click', hideModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) hideModal(); });
+    if (amountInput) amountInput.addEventListener('input', (e) => {
+      let v = parseInt(e.target.value, 10);
+      if (Number.isNaN(v)) v = 0;
+      e.target.value = String(v);
+      updateNetDisplay(v);
+    });
+
+    if (modalConfirm) {
+      modalConfirm.addEventListener('click', () => {
+        if (!state.asso) return;
+        const raw = parseInt(amountInput.value, 10);
+        if (Number.isNaN(raw)) { alert('Montant invalide'); return; }
+        const amountCents = raw * 100;
+        const minRequiredInt = parseMinInt(state.asso.min_amount);
+        if (amountCents < minRequiredInt * 100) {
+          alert('Le montant doit être supérieur ou égal au minimum requis.');
+          return;
+        }
+        fetch('https://portail.slc.asso.fr/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            asso_id: state.asso.id,
+            price: amountCents,
+            description: state.asso.description || 'Adhésion',
+          })
+        })
+          .then(res => res.json())
+          .then(resp => { window.location.href = resp.url; })
+          .catch(err => console.error(err));
+      });
+    }
+
+    // Publish API
+    window.SLCAdhesion.showModal = showModal;
+    window.SLCAdhesion.hideModal = hideModal;
+  })();
 </script>

@@ -1,77 +1,85 @@
 <style>
-.search-container {
+  .search-container {
     margin-bottom: 2rem;
-}
+  }
 
-.search-container input {
+  .search-container input {
     width: 100%;
     padding: 0.8rem;
     border: none;
     border-radius: 4px;
     background: #fff;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     font-size: 1rem;
     transition: box-shadow 0.15s ease, border-color 0.2s ease;
-}
+  }
 
-#assos {
+  #assos {
     display: grid;
     gap: 2rem;
     margin: 2rem 0;
-}
+  }
 
-/* Loading indicator inside the list */
-@keyframes slc-spin { to { transform: rotate(360deg); } }
-#assos .loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  min-height: 120px;
-  color: var(--highlightColor, #4088b8);
-}
-#assos .loading .spinner {
-  width: 18px; height: 18px;
-  border: 2px solid currentColor;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  animation: slc-spin .8s linear infinite;
-}
-#assos .loading-error {
-  color: #b00020;
-  background: #fff3f3;
-  border-radius: 4px;
-  padding: 1rem;
-}
+  /* Loading indicator inside the list */
+  @keyframes slc-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
-#assos .asso-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  transition: transform 0.2s ease-in-out;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  #assos .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    min-height: 120px;
+    color: var(--highlightColor, #4088b8);
+  }
 
-#assos .asso-card:hover {
+  #assos .loading .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid currentColor;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: slc-spin .8s linear infinite;
+  }
+
+  #assos .loading-error {
+    color: #b00020;
+    background: #fff3f3;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
+  #assos .asso-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #assos .asso-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-#assos h3 {
+  #assos h3 {
     margin: 0 0 1rem;
     color: var(--highlightColor, #4088b8);
-}
+  }
 
-#assos p {
+  #assos p {
     margin: 0 0 1.5rem;
     font-size: 1.1rem;
     flex: 1;
-}
+  }
 
-#assos .btn {
+  #assos .btn {
     display: inline-block;
     padding: 0.5rem 1.5rem;
     background: var(--highlightColor, #4088b8);
@@ -81,37 +89,37 @@
     cursor: pointer;
     font-weight: bold;
     transition: background 0.2s ease;
-}
+  }
 
-#assos .btn:hover {
+  #assos .btn:hover {
     background: var(--highlightColorHover, #3476a3);
-}
+  }
 
-/* Keep button at bottom within flex column cards */
-#assos .asso-card .btn {
-  margin-top: auto;
-}
+  /* Keep button at bottom within flex column cards */
+  #assos .asso-card .btn {
+    margin-top: auto;
+  }
 
-/* Modal styles are provided by the reusable partial: adhesion-modal-core.html */
+  /* Modal styles are provided by the reusable partial: adhesion-modal-core.html */
 
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
     #assos {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-}
+  }
 </style>
 
 {{ partial "adhesion-modal-core.html" . }}
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const container = document.getElementById('assos');
-  if (!container) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('assos');
+    if (!container) return;
 
-  // Create and insert search box
-  const searchContainer = document.createElement('div');
-  searchContainer.className = 'search-container';
-  searchContainer.innerHTML = `
+    // Create and insert search box
+    const searchContainer = document.createElement('div');
+    searchContainer.className = 'search-container';
+    searchContainer.innerHTML = `
     <input 
       type="text" 
       id="asso-search" 
@@ -119,79 +127,72 @@ document.addEventListener('DOMContentLoaded', function () {
       aria-label="Rechercher une association"
     >
   `;
-  container.parentNode.insertBefore(searchContainer, container);
+    container.parentNode.insertBefore(searchContainer, container);
 
-  const filterAssos = (searchTerm) => {
-    const items = container.getElementsByClassName('asso-card');
-    const term = searchTerm.toLowerCase().trim();
-    Array.from(items).forEach(item => {
-      const titleEl = item.querySelector('h3');
-      const title = titleEl ? titleEl.textContent.toLowerCase() : '';
-      item.style.display = title.includes(term) ? '' : 'none';
-    });
-  };
+    const filterAssos = (searchTerm) => {
+      const items = container.getElementsByClassName('asso-card');
+      const term = searchTerm.toLowerCase().trim();
+      Array.from(items).forEach(item => {
+        const titleEl = item.querySelector('h3');
+        const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+        item.style.display = title.includes(term) ? '' : 'none';
+      });
+    };
 
-  const searchInput = document.getElementById('asso-search');
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => filterAssos(e.target.value));
-  }
+    const searchInput = document.getElementById('asso-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => filterAssos(e.target.value));
+    }
 
-  const escapeHtml = (str) => String(str).replace(/[&<>'"\n]/g, (s) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;', '\n': '<br>'
-  }[s]));
+    const escapeHtml = (str) => String(str).replace(/[&<>'"\n]/g, (s) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;', '\n': '<br>'
+    }[s]));
 
-  // Fetch associations
-  container.setAttribute('aria-busy', 'true');
-  container.innerHTML = `
+    // Fetch associations
+    container.setAttribute('aria-busy', 'true');
+    container.innerHTML = `
     <div class="loading" role="status" aria-live="polite">
       <span class="spinner" aria-hidden="true"></span>
       <span>Chargement des associations…</span>
     </div>
   `;
-  fetch('https://n8n.slc.asso.fr/webhook/7e6016cd-e5fa-4376-98bb-cff54110d4d8')
-    .then((res) => {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
-    })
-    .then((data) => {
-      container.removeAttribute('aria-busy');
-      container.textContent = '';
-      if (!Array.isArray(data)) {
-        console.error('Données inattendues', data);
-        container.innerHTML = '<p class="loading-error">Impossible d\'afficher la liste pour le moment.</p>';
-        return;
-      }
-      if (data.length === 0) {
-        container.innerHTML = '<p>Aucune association trouvée.</p>';
-        return;
-      }
-      data.forEach((asso) => {
-        const id = `btn-${asso.asso_id}`;
-        const item = document.createElement('div');
-        item.className = 'asso-card';
-        item.innerHTML = `
+    fetch('https://portail.slc.asso.fr/api/associations')
+      .then((res) => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        container.removeAttribute('aria-busy');
+        container.textContent = '';
+        // Adaptation : data.associations au lieu de data directement
+        const associations = Array.isArray(data.associations) ? data.associations : [];
+        if (associations.length === 0) {
+          container.innerHTML = '<p>Aucune association trouvée.</p>';
+          return;
+        }
+        associations.forEach((asso) => {
+          const id = `btn-${asso.id}`; // Adaptation : asso.id au lieu de asso.asso_id
+          const item = document.createElement('div');
+          item.className = 'asso-card';
+          item.innerHTML = `
             <h3>${escapeHtml(asso.description || '')}</h3>
             <button id="${id}" class="btn" type="button">Adhérer</button>
         `;
-        container.appendChild(item);
+          container.appendChild(item);
 
-        const btn = item.querySelector(`#${id}`);
-        if (!btn) return;
-        btn.addEventListener('click', () => {
-          if (window.SLCAdhesion && typeof window.SLCAdhesion.showModal === 'function') {
-            window.SLCAdhesion.showModal(asso);
-          }
+          const btn = item.querySelector(`#${id}`);
+          if (!btn) return;
+          btn.addEventListener('click', () => {
+            if (window.SLCAdhesion && typeof window.SLCAdhesion.showModal === 'function') {
+              window.SLCAdhesion.showModal(asso);
+            }
+          });
         });
+      })
+      .catch((err) => {
+        console.error('Erreur chargement associations:', err);
+        container.removeAttribute('aria-busy');
+        container.innerHTML = '<p class="loading-error">Erreur de chargement des associations.</p>';
       });
-    })
-    .catch((err) => {
-      console.error('Erreur chargement associations:', err);
-      container.removeAttribute('aria-busy');
-      container.innerHTML = '<p class="loading-error">Erreur de chargement des associations.</p>';
-    });
-});
-
- 
+  });
 </script>
-
-          
