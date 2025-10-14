@@ -122,18 +122,23 @@
     const minValueEl = document.querySelector('.modal__min-value');
     const netValueEl = document.querySelector('.modal__net-value');
 
-    const parseMinInt = (v) => {
-      const n = Number(v || 0);
-      return Math.ceil(isNaN(n) ? 0 : n);
+    // Gère correctement les montants décimaux
+    const parseMinAmount = (v) => {
+      const n = Number(v);
+      return isNaN(n) ? 0 : parseFloat(n.toFixed(2)); // garde 2 décimales
     };
 
     const state = { asso: null };
 
     function updateNetDisplay(v) {
       if (!netValueEl) return;
-      const intV = Number.isNaN(parseInt(v, 10)) ? 0 : parseInt(v, 10);
-      // Compute net (= 34% of amount) in cents using integer math to avoid float rounding
-      const netCents = intV * 34; // v euros -> v*34 cents
+      const amount = Number.parseFloat(v);
+      if (Number.isNaN(amount)) {
+        netValueEl.textContent = "0,00";
+        return;
+      }
+      // Calcule le coût net après déduction fiscale (≈ 34%)
+      const netCents = Math.round(amount * 34); // en centimes
       const euros = Math.floor(netCents / 100);
       const cents = Math.abs(netCents % 100);
       netValueEl.textContent = euros + ',' + String(cents).padStart(2, '0');
@@ -141,15 +146,15 @@
 
     function showModal(asso) {
       state.asso = asso || {};
-      const minInt = parseMinInt(state.asso.min_amount);
+      const minAmount = parseMinAmount(state.asso.montant_min);
       if (amountInput) {
-        amountInput.step = 1;
-        amountInput.min = String(minInt);
-        // Clear value on each open (user must type the amount)
+        amountInput.step = 0.01; // autorise les centimes
+        amountInput.min = String(minAmount);
+        // Efface la valeur précédente
         amountInput.value = '';
       }
-      if (minValueEl) minValueEl.textContent = String(minInt);
-      // Reset net display to 0 when opening
+      if (minValueEl) minValueEl.textContent = String(minAmount);
+      // Reset net display à 0
       updateNetDisplay(0);
 
       if (modalOverlay) {
@@ -167,28 +172,31 @@
       }
     }
 
-    // Wire basic events
+    // Événements
     if (modalClose) modalClose.addEventListener('click', hideModal);
     if (modalCancel) modalCancel.addEventListener('click', hideModal);
     if (modalOverlay) modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) hideModal(); });
     if (amountInput) amountInput.addEventListener('input', (e) => {
-      let v = parseInt(e.target.value, 10);
-      if (Number.isNaN(v)) v = 0;
-      e.target.value = String(v);
-      updateNetDisplay(v);
+      const v = parseFloat(e.target.value);
+      updateNetDisplay(isNaN(v) ? 0 : v);
     });
 
     if (modalConfirm) {
       modalConfirm.addEventListener('click', () => {
         if (!state.asso) return;
-        const raw = parseInt(amountInput.value, 10);
-        if (Number.isNaN(raw)) { alert('Montant invalide'); return; }
-        const amountCents = raw * 100;
-        const minRequiredInt = parseMinInt(state.asso.min_amount);
-        if (amountCents < minRequiredInt * 100) {
-          alert('Le montant doit être supérieur ou égal au minimum requis.');
+        const raw = parseFloat(amountInput.value);
+        if (Number.isNaN(raw)) {
+          alert('Montant invalide');
           return;
         }
+        const amountCents = Math.round(raw * 100);
+        const minRequired = parseMinAmount(state.asso.montant_min);
+
+        if (amountCents < Math.round(minRequired * 100)) {
+          alert(`Le montant doit être supérieur ou égal à ${minRequired} €.`);
+          return;
+        }
+
         fetch('https://portail.slc.asso.fr/api/checkout', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -204,7 +212,7 @@
       });
     }
 
-    // Publish API
+    // Publication API globale
     window.SLCAdhesion.showModal = showModal;
     window.SLCAdhesion.hideModal = hideModal;
   })();
