@@ -82,67 +82,77 @@
 &lt;script&gt;var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}&lt;/script&gt;
 &lt;p&gt;Le présent consentement est valide tant et aussi longtemps qu’il est nécessaire à la finalité poursuivie par le traitement mis en œuvre par le SLC-CSF dans la mesure où il n’a pas fait l’objet d’un retrait.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité la transmission/diffusion d’information et la gestion de sa communication (y compris de propagande électorale).&lt;/em&gt; &lt;em&gt;Le SLC-CSF conserve les données transmises via ce formulaire tant que la personne concernée ne retire pas son consentement à la réception d’information.&lt;/em&gt; Vous pouvez exercer votre droit de retrait de consentement en écrivant à &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Adhésions</title><link>https://slc.asso.fr/menu/adh%C3%A9sions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/adh%C3%A9sions/</guid><description>&lt;style&gt;
-.btn {
-	display: inline-block;
-	padding: 0.5rem 1.5rem;
-	background: var(--highlightColor, #4088b8);
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	font-weight: bold;
-	transition: background 0.2s ease;
-}
-.btn:hover {
-	background: var(--highlightColorHover, #3476a3);
-}
+ .btn {
+ display: inline-block;
+ padding: 0.5rem 1.5rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ transition: background 0.2s ease;
+ }
 
-a.btn {
+ .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+ }
+
+ a.btn {
  color: #fff !important;
  text-decoration: none !important;
-}
-a.btn:hover,
-a.btn:focus {
+ }
+
+ a.btn:hover,
+ a.btn:focus {
  text-decoration: none;
-}
+ }
 
  
-.cards-2col {
+ .cards-2col {
  display: grid;
  gap: 1.5rem;
-}
-@media (min-width: 768px) {
+ }
+
+ @media (min-width: 768px) {
  .cards-2col {
  grid-template-columns: repeat(2, 1fr);
  }
-}
+ }
 
  
-.cards-2col .widget {
- display: flex; 
-}
-.cards-2col .widget__content {
+ .cards-2col .widget {
+ display: flex;
+ 
+ }
+
+ .cards-2col .widget__content {
  display: flex;
  flex-direction: column;
- flex: 1; 
-}
+ flex: 1;
+ 
+ }
 
  
-.cards-2col .post__title {
+ .cards-2col .post__title {
  margin: 0 0 .5rem;
-}
-.cards-2col .post__lead {
+ }
+
+ .cards-2col .post__lead {
  margin: 0 0 1rem;
  line-height: 1.5;
- min-height: 3em; 
-}
+ min-height: 3em;
+ 
+ }
 
  
-.cards-2col .widget__content .btn {
- margin-top: auto; 
- align-self: stretch; 
+ .cards-2col .widget__content .btn {
+ margin-top: auto;
+ 
+ align-self: stretch;
+ 
  text-align: center;
-}
+ }
 &lt;/style&gt;
 
 &lt;div class="cards-2col"&gt;
@@ -357,4 +367,180 @@ a.btn:focus {
  &lt;strong class="modal__min-value" aria-live="polite"&gt;&lt;/strong&gt; €.
  &lt;br /&gt;Votre don vous permet de bénéficier d'une déduction fiscale de 66% dans la limite de 20% de votre revenu
  imposable. Un reçu vous sera envoyé par email ou par courrier.
+ &lt;/p&gt;</description></item><item><title>Paiement annulé</title><link>https://slc.asso.fr/cancel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/cancel/</guid><description>&lt;style&gt;
+.post__title,
+.page__title,
+h1.title {
+ display: none !important;
+}
+
+.payment-status {
+ max-width: 600px;
+ margin: 3rem auto;
+ padding: 2rem;
+ text-align: center;
+ background: #fff;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-status__icon {
+ font-size: 4rem;
+ margin-bottom: 1rem;
+}
+
+.payment-status__icon.cancel {
+ color: #dc3545;
+}
+
+.payment-status h1 {
+ color: var(--highlightColor, #4088b8);
+ margin-bottom: 1rem;
+}
+
+.payment-status p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ color: #333;
+}
+
+.payment-status .btn {
+ display: inline-block;
+ padding: 0.75rem 2rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ text-decoration: none;
+ font-weight: bold;
+ transition: background 0.2s ease;
+ margin: 0.5rem;
+}
+
+.payment-status .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+}
+
+.payment-status .btn.primary {
+ background: var(--highlightColor, #4088b8);
+}
+
+.payment-status .btn.secondary {
+ background: #6c757d;
+}
+
+.payment-status .btn.secondary:hover {
+ background: #5a6268;
+}
+
+.payment-status .info-box {
+ background: #fff3cd;
+ border-left: 4px solid #ffc107;
+ padding: 1rem;
+ margin: 1.5rem 0;
+ text-align: left;
+ border-radius: 4px;
+}
+
+.payment-status .info-box h3 {
+ margin: 0 0 0.5rem;
+ color: #856404;
+ font-size: 1.1rem;
+}
+
+.payment-status .info-box p {
+ margin: 0.5rem 0;
+ font-size: 1rem;
+}
+&lt;/style&gt;
+&lt;div class="payment-status"&gt;
+ &lt;div class="payment-status__icon cancel"&gt;✕&lt;/div&gt;
+ &lt;h1&gt;Paiement annulé&lt;/h1&gt;
+ &lt;p&gt;
+ Votre paiement a été annulé. Aucune somme n'a été prélevée sur votre compte.
+ &lt;/p&gt;</description></item><item><title>Paiement réussi</title><link>https://slc.asso.fr/success/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/success/</guid><description>&lt;style&gt;
+.post__title,
+.page__title,
+h1.title {
+ display: none !important;
+}
+
+.payment-status {
+ max-width: 600px;
+ margin: 3rem auto;
+ padding: 2rem;
+ text-align: center;
+ background: #fff;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-status__icon {
+ font-size: 4rem;
+ margin-bottom: 1rem;
+}
+
+.payment-status__icon.success {
+ color: #28a745;
+}
+
+.payment-status h1 {
+ color: var(--highlightColor, #4088b8);
+ margin-bottom: 1rem;
+}
+
+.payment-status p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ color: #333;
+}
+
+.payment-status .btn {
+ display: inline-block;
+ padding: 0.75rem 2rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ text-decoration: none;
+ font-weight: bold;
+ transition: background 0.2s ease;
+ margin: 0.5rem;
+}
+
+.payment-status .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+}
+
+.payment-status .info-box {
+ background: #e8f4f8;
+ border-left: 4px solid var(--highlightColor, #4088b8);
+ padding: 1rem;
+ margin: 1.5rem 0;
+ text-align: left;
+ border-radius: 4px;
+}
+
+.payment-status .info-box h3 {
+ margin: 0 0 0.5rem;
+ color: var(--highlightColor, #4088b8);
+ font-size: 1.1rem;
+}
+
+.payment-status .info-box ul {
+ margin: 0.5rem 0 0 1.5rem;
+ padding: 0;
+}
+
+.payment-status .info-box li {
+ margin: 0.5rem 0;
+}
+&lt;/style&gt;
+&lt;div class="payment-status"&gt;
+ &lt;div class="payment-status__icon success"&gt;✓&lt;/div&gt;
+ &lt;h1&gt;Paiement réussi !&lt;/h1&gt;
+ &lt;p&gt;
+ Merci pour votre adhésion au Syndicat du Logement et de la Consommation !
  &lt;/p&gt;</description></item></channel></rss>

@@ -84,67 +84,77 @@
 &lt;p&gt;&lt;em&gt;Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité la transmission/diffusion d’information et la gestion de sa communication (y compris de propagande électorale).&lt;/em&gt; &lt;em&gt;Le SLC-CSF conserve les données transmises via ce formulaire tant que la personne concernée ne retire pas son consentement à la réception d’information.&lt;/em&gt; Vous pouvez exercer votre droit de retrait de consentement en écrivant à &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Mentions légales</title><link>https://slc.asso.fr/footer/mentions-legales/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/footer/mentions-legales/</guid><description>&lt;p&gt;Les utilisateurs du site Internet sont tenus de respecter les dispositions de la loi relative à l&amp;rsquo;informatique, aux fichiers et aux libertés, dont la violation est passible de sanctions pénales.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Propriété intellectuelle&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Le site Internet &lt;a href="http://www.slc.asso.fr"&gt;www.slc.asso.fr&lt;/a&gt; est protégé par les dispositions du Code de la Propriété Intellectuelle, notamment par celles relatives à la propriété littéraire et artistique, aux droits d&amp;rsquo;auteur et à la protection des bases de données. Ces droits sont la propriété exclusive du Syndicat du Logement et de la Consommation. Le Code de la Propriété Intellectuelle n&amp;rsquo;autorise aux termes de l&amp;rsquo;article L.122-5, d&amp;rsquo;une part, que les copies ou reproductions strictement réservées à l&amp;rsquo;usage privé du copiste et non destinées à une utilisation collective et, d&amp;rsquo;autre part, que les analyses et les courtes citations dans un but d&amp;rsquo;exemple et d&amp;rsquo;illustration. De même, l&amp;rsquo;article L.342-3 du Code de la Propriété Intellectuelle n&amp;rsquo;autorise que l&amp;rsquo;extraction ou la réutilisation d&amp;rsquo;une partie non substantielle du contenu d&amp;rsquo;une base de données mise à la disposition du public par son titulaire. Par conséquent, toute représentation ou reproduction non autorisée du site Internet &lt;a href="http://www.slc.asso.fr"&gt;www.slc.asso.fr&lt;/a&gt; par quelque moyen que ce soit, est strictement interdite sous peine de poursuites judiciaires. La violation de l’un des droits d’auteur de l’œuvre est un délit de contrefaçon passible, aux termes de l’article L.335-2 du Code de la Propriété Intellectuelle, de 2 ans d’emprisonnement et de 15 000 € d’amende. Par conséquent, toute reproduction totale ou partielle de ces éléments est soumise à autorisation expresse du Syndicat du Logement et de la Consommation. Vous pouvez nous contacter pour formuler votre demande à l&amp;rsquo;adresse suivante : &lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Adhésions</title><link>https://slc.asso.fr/menu/adh%C3%A9sions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/menu/adh%C3%A9sions/</guid><description>&lt;style&gt;
-.btn {
-	display: inline-block;
-	padding: 0.5rem 1.5rem;
-	background: var(--highlightColor, #4088b8);
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	font-weight: bold;
-	transition: background 0.2s ease;
-}
-.btn:hover {
-	background: var(--highlightColorHover, #3476a3);
-}
+ .btn {
+ display: inline-block;
+ padding: 0.5rem 1.5rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ transition: background 0.2s ease;
+ }
 
-a.btn {
+ .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+ }
+
+ a.btn {
  color: #fff !important;
  text-decoration: none !important;
-}
-a.btn:hover,
-a.btn:focus {
+ }
+
+ a.btn:hover,
+ a.btn:focus {
  text-decoration: none;
-}
+ }
 
  
-.cards-2col {
+ .cards-2col {
  display: grid;
  gap: 1.5rem;
-}
-@media (min-width: 768px) {
+ }
+
+ @media (min-width: 768px) {
  .cards-2col {
  grid-template-columns: repeat(2, 1fr);
  }
-}
+ }
 
  
-.cards-2col .widget {
- display: flex; 
-}
-.cards-2col .widget__content {
+ .cards-2col .widget {
+ display: flex;
+ 
+ }
+
+ .cards-2col .widget__content {
  display: flex;
  flex-direction: column;
- flex: 1; 
-}
+ flex: 1;
+ 
+ }
 
  
-.cards-2col .post__title {
+ .cards-2col .post__title {
  margin: 0 0 .5rem;
-}
-.cards-2col .post__lead {
+ }
+
+ .cards-2col .post__lead {
  margin: 0 0 1rem;
  line-height: 1.5;
- min-height: 3em; 
-}
+ min-height: 3em;
+ 
+ }
 
  
-.cards-2col .widget__content .btn {
- margin-top: auto; 
- align-self: stretch; 
+ .cards-2col .widget__content .btn {
+ margin-top: auto;
+ 
+ align-self: stretch;
+ 
  text-align: center;
-}
+ }
 &lt;/style&gt;
 
 &lt;div class="cards-2col"&gt;
@@ -418,4 +428,180 @@ Salle 612, Pavillon 6 – Paris Porte de Versailles&lt;/p&gt;
 &lt;/ul&gt;</description></item><item><title>Recevoir nos informations</title><link>https://slc.asso.fr/post/recevoir-nos-informations/</link><pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/recevoir-nos-informations/</guid><description>&lt;p&gt;&lt;strong&gt;Si vous souhaitez être informé des actions menées par le SLC-CSF avec ses associations, vous pouvez communiquez vos coordonnées &lt;a href="menu/recevez-nos-informations" title="Recevoir nos informations"&gt;ici.&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Meilleurs voeux 2014</title><link>https://slc.asso.fr/post/meilleurs-voeux-2014/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/meilleurs-voeux-2014/</guid><description>&lt;p&gt;&lt;a href="https://slc.asso.fr/uploads/VoeuxSLC2014V1_ALL.jpg"&gt;&lt;img src="images/VoeuxSLC2014V1_ALL-1024x511.jpg" alt="VoeuxSLC2014V1_ALL"&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Gel de l'APL : La CSF refuse que l'on fasse des économies sur le dos des plus modestes</title><link>https://slc.asso.fr/post/la-csf-refuse-que-lon-fasse-des-economies-sur-le-dos-des-plus-modestes/</link><pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/la-csf-refuse-que-lon-fasse-des-economies-sur-le-dos-des-plus-modestes/</guid><description>&lt;p&gt;&lt;a href="https://slc.asso.fr/uploads/CP-Gel-de-lAPL-1oct-2013.pdf"&gt;Communiqué de Presse - APL&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Chauffage : exigeons l'achat en direct du gaz !</title><link>https://slc.asso.fr/post/chauffage-exigeons-lachat-en-direct-du-gaz/</link><pubDate>Mon, 01 Apr 2013 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/chauffage-exigeons-lachat-en-direct-du-gaz/</guid><description>&lt;p&gt;Accédez à l&amp;rsquo;information diffusée à l&amp;rsquo;ensemble des locataires de Paris Habitat :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://slc.asso.fr/uploads/TractPHChauffageDaaf2013.pdf"&gt;Chauffage: exigeons l&amp;rsquo;achat en direct du gaz ! (mars 2013)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Meilleurs voeux 2013</title><link>https://slc.asso.fr/post/meilleurs-voeux-2013/</link><pubDate>Sun, 06 Jan 2013 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/meilleurs-voeux-2013/</guid><description>&lt;p&gt;&lt;a href="uploads/VoeuxSLC2013V2_ALL-1024x511.png"&gt;VoeuxSLC2013V2_ALL&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Bienvenue</title><link>https://slc.asso.fr/post/hello-world/</link><pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/hello-world/</guid><description>&lt;p&gt;Bienvenue sur notre site. Si vous êtes locataires et souhaitez agir avec vos voisins pour défendre vos droits sur votre immeuble, n&amp;rsquo;hésitez pas à nous contacter par mel (&lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;) en vue de créer une association de locataires SLC-CSF !&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item><item><title>Meilleurs voeux 2013</title><link>https://slc.asso.fr/post/meilleurs-voeux-2013/</link><pubDate>Sun, 06 Jan 2013 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/meilleurs-voeux-2013/</guid><description>&lt;p&gt;&lt;a href="uploads/VoeuxSLC2013V2_ALL-1024x511.png"&gt;VoeuxSLC2013V2_ALL&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Bienvenue</title><link>https://slc.asso.fr/post/hello-world/</link><pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/post/hello-world/</guid><description>&lt;p&gt;Bienvenue sur notre site. Si vous êtes locataires et souhaitez agir avec vos voisins pour défendre vos droits sur votre immeuble, n&amp;rsquo;hésitez pas à nous contacter par mel (&lt;a href="mailto:info@slc.asso.fr"&gt;info@slc.asso.fr&lt;/a&gt;) en vue de créer une association de locataires SLC-CSF !&lt;/p&gt;</description></item><item><title>Paiement annulé</title><link>https://slc.asso.fr/cancel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/cancel/</guid><description>&lt;style&gt;
+.post__title,
+.page__title,
+h1.title {
+ display: none !important;
+}
+
+.payment-status {
+ max-width: 600px;
+ margin: 3rem auto;
+ padding: 2rem;
+ text-align: center;
+ background: #fff;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-status__icon {
+ font-size: 4rem;
+ margin-bottom: 1rem;
+}
+
+.payment-status__icon.cancel {
+ color: #dc3545;
+}
+
+.payment-status h1 {
+ color: var(--highlightColor, #4088b8);
+ margin-bottom: 1rem;
+}
+
+.payment-status p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ color: #333;
+}
+
+.payment-status .btn {
+ display: inline-block;
+ padding: 0.75rem 2rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ text-decoration: none;
+ font-weight: bold;
+ transition: background 0.2s ease;
+ margin: 0.5rem;
+}
+
+.payment-status .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+}
+
+.payment-status .btn.primary {
+ background: var(--highlightColor, #4088b8);
+}
+
+.payment-status .btn.secondary {
+ background: #6c757d;
+}
+
+.payment-status .btn.secondary:hover {
+ background: #5a6268;
+}
+
+.payment-status .info-box {
+ background: #fff3cd;
+ border-left: 4px solid #ffc107;
+ padding: 1rem;
+ margin: 1.5rem 0;
+ text-align: left;
+ border-radius: 4px;
+}
+
+.payment-status .info-box h3 {
+ margin: 0 0 0.5rem;
+ color: #856404;
+ font-size: 1.1rem;
+}
+
+.payment-status .info-box p {
+ margin: 0.5rem 0;
+ font-size: 1rem;
+}
+&lt;/style&gt;
+&lt;div class="payment-status"&gt;
+ &lt;div class="payment-status__icon cancel"&gt;✕&lt;/div&gt;
+ &lt;h1&gt;Paiement annulé&lt;/h1&gt;
+ &lt;p&gt;
+ Votre paiement a été annulé. Aucune somme n'a été prélevée sur votre compte.
+ &lt;/p&gt;</description></item><item><title>Paiement réussi</title><link>https://slc.asso.fr/success/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://slc.asso.fr/success/</guid><description>&lt;style&gt;
+.post__title,
+.page__title,
+h1.title {
+ display: none !important;
+}
+
+.payment-status {
+ max-width: 600px;
+ margin: 3rem auto;
+ padding: 2rem;
+ text-align: center;
+ background: #fff;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-status__icon {
+ font-size: 4rem;
+ margin-bottom: 1rem;
+}
+
+.payment-status__icon.success {
+ color: #28a745;
+}
+
+.payment-status h1 {
+ color: var(--highlightColor, #4088b8);
+ margin-bottom: 1rem;
+}
+
+.payment-status p {
+ font-size: 1.1rem;
+ line-height: 1.6;
+ margin-bottom: 1.5rem;
+ color: #333;
+}
+
+.payment-status .btn {
+ display: inline-block;
+ padding: 0.75rem 2rem;
+ background: var(--highlightColor, #4088b8);
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ text-decoration: none;
+ font-weight: bold;
+ transition: background 0.2s ease;
+ margin: 0.5rem;
+}
+
+.payment-status .btn:hover {
+ background: var(--highlightColorHover, #3476a3);
+}
+
+.payment-status .info-box {
+ background: #e8f4f8;
+ border-left: 4px solid var(--highlightColor, #4088b8);
+ padding: 1rem;
+ margin: 1.5rem 0;
+ text-align: left;
+ border-radius: 4px;
+}
+
+.payment-status .info-box h3 {
+ margin: 0 0 0.5rem;
+ color: var(--highlightColor, #4088b8);
+ font-size: 1.1rem;
+}
+
+.payment-status .info-box ul {
+ margin: 0.5rem 0 0 1.5rem;
+ padding: 0;
+}
+
+.payment-status .info-box li {
+ margin: 0.5rem 0;
+}
+&lt;/style&gt;
+&lt;div class="payment-status"&gt;
+ &lt;div class="payment-status__icon success"&gt;✓&lt;/div&gt;
+ &lt;h1&gt;Paiement réussi !&lt;/h1&gt;
+ &lt;p&gt;
+ Merci pour votre adhésion au Syndicat du Logement et de la Consommation !
+ &lt;/p&gt;</description></item></channel></rss>
