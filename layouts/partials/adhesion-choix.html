@@ -1,65 +1,75 @@
 <style>
-.btn {
-	display: inline-block;
-	padding: 0.5rem 1.5rem;
-	background: var(--highlightColor, #4088b8);
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	font-weight: bold;
-	transition: background 0.2s ease;
-}
-.btn:hover {
-	background: var(--highlightColorHover, #3476a3);
-}
-
-a.btn {
-  color: #fff !important;
-  text-decoration: none !important;
-}
-a.btn:hover,
-a.btn:focus {
-  text-decoration: none;
-}
-
-/* Grille 2 colonnes pour les cartes */
-.cards-2col {
-  display: grid;
-  gap: 1.5rem;
-}
-@media (min-width: 768px) {
-  .cards-2col {
-    grid-template-columns: repeat(2, 1fr);
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--highlightColor, #4088b8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
   }
-}
 
-/* Hauteur uniforme + bouton aligné en bas et plein largeur */
-.cards-2col .widget {
-  display: flex;           /* remplace height:100% */
-}
-.cards-2col .widget__content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;                 /* prend toute la hauteur de la carte */
-}
+  .btn:hover {
+    background: var(--highlightColorHover, #3476a3);
+  }
 
-/* Marges cohérentes des textes */
-.cards-2col .post__title {
-  margin: 0 0 .5rem;
-}
-.cards-2col .post__lead {
-  margin: 0 0 1rem;
-  line-height: 1.5;
-  min-height: 3em;         /* réserve ~2 lignes pour aligner visuellement */
-}
+  a.btn {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
 
-/* Bouton en bas et même largeur */
-.cards-2col .widget__content .btn {
-  margin-top: auto;        /* pousse en bas */
-  align-self: stretch;     /* pleine largeur */
-  text-align: center;
-}
+  a.btn:hover,
+  a.btn:focus {
+    text-decoration: none;
+  }
+
+  /* Grille 2 colonnes pour les cartes */
+  .cards-2col {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .cards-2col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Hauteur uniforme + bouton aligné en bas et plein largeur */
+  .cards-2col .widget {
+    display: flex;
+    /* remplace height:100% */
+  }
+
+  .cards-2col .widget__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* prend toute la hauteur de la carte */
+  }
+
+  /* Marges cohérentes des textes */
+  .cards-2col .post__title {
+    margin: 0 0 .5rem;
+  }
+
+  .cards-2col .post__lead {
+    margin: 0 0 1rem;
+    line-height: 1.5;
+    min-height: 3em;
+    /* réserve ~2 lignes pour aligner visuellement */
+  }
+
+  /* Bouton en bas et même largeur */
+  .cards-2col .widget__content .btn {
+    margin-top: auto;
+    /* pousse en bas */
+    align-self: stretch;
+    /* pleine largeur */
+    text-align: center;
+  }
 </style>
 
 <div class="cards-2col">
@@ -83,21 +93,57 @@ a.btn:focus {
 {{ partial "adhesion-modal-core.html" . }}
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const individualLink = document.querySelector('a.btn[href^="/menu/adhesion-individuelle/"]');
-  if (!individualLink) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    const individualLink = document.querySelector('a.btn[href^="/menu/adhesion-individuelle/"]');
+    if (!individualLink) return;
 
-  // Open the same modal for individual adhesion with fixed asso_id and minimum
-  individualLink.addEventListener('click', function(e) {
-    // If you want to keep navigation as fallback, only preventDefault when API exists
-    if (window.SLCAdhesion && typeof window.SLCAdhesion.showModal === 'function') {
-      e.preventDefault();
-      window.SLCAdhesion.showModal({
-        asso_id: 30,
-        min_amount: 33,
-        description: 'Adhésion individuelle'
+    // Fetch association data for asso_id 29
+    let assoIndividuelle = null;
+
+    fetch('https://portail.slc.asso.fr/api/associations')
+      .then(res => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(data => {
+        const associations = Array.isArray(data.associations) ? data.associations : [];
+        // Find association with id 29
+        assoIndividuelle = associations.find(asso => asso.id === 29);
+
+        if (!assoIndividuelle) {
+          console.warn('Association individuelle (id: 29) non trouvée dans l\'API');
+          // Fallback values
+          assoIndividuelle = {
+            id: 29,
+            montant_min: 33,
+            description: 'Adhésion individuelle'
+          };
+        }
+      })
+      .catch(err => {
+        console.error('Erreur chargement association individuelle:', err);
+        // Fallback values in case of error
+        assoIndividuelle = {
+          id: 29,
+          montant_min: 33,
+          description: 'Adhésion individuelle'
+        };
       });
-    }
+
+    // Open the modal for individual adhesion
+    individualLink.addEventListener('click', function (e) {
+      if (window.SLCAdhesion && typeof window.SLCAdhesion.showModal === 'function') {
+        e.preventDefault();
+
+        // Use fetched data or fallback
+        const assoData = assoIndividuelle || {
+          id: 29,
+          montant_min: 33,
+          description: 'Adhésion individuelle'
+        };
+
+        window.SLCAdhesion.showModal(assoData);
+      }
+    });
   });
-});
 </script>
