@@ -1,5 +1,5 @@
 ---
-title: Adhésions
+title: Adhérer
 menu: main
 weight: 14
 ---
