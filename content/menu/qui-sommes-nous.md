@@ -11,7 +11,7 @@ Avec plus de quatre-vingt associations de locataires affiliées au Syndicat, le 
 
 Dans le cadre des élections des représentants des locataires dans les organismes gérant des logements sociaux, des représentants SLC des locataires ont été élus et siègent aux Conseils d’Administration de Paris Habitat, de la RIVP, d’Elogie-SIEMP et de HSF.
 
-**Le SLC-CSF est actuellement la première organisation de locataires chez les trois principaux bailleurs sociaux de la Ville de Paris que sont Paris Habitat\*, la RIVP\*\*, Elogie-SIEMP\*\*\* et Habitat Social Français (HSF)\*\*\*\*.**
+**Le SLC-CSF est actuellement la première organisation de locataires chez les quatre principaux bailleurs sociaux de la Ville de Paris que sont Paris Habitat\*, la RIVP\*\*, Elogie-SIEMP\*\*\* et Habitat Social Français (HSF)\*\*\*\*.**
 
 Le SLC-CSF est indépendant de tout parti politique.
 
@@ -21,5 +21,5 @@ L’ensemble du travail effectué par le Syndicat et ses Associations est réali
 
 *\* Paris Habitat – Office Public de l’Habitat*\
 *\*\* Régie Immobilière de la Ville de Paris*\
-*\*\**Société Immobilière d’Economie Mixte de la ville de Paris*\
+\*\***Société Immobilière d’Economie Mixte de la ville de Paris*\
 *\*\*\*\*Entreprise Sociale de l’Habitat (SA HLM), filiale de la RIVP*
