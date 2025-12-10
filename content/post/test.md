@@ -1,7 +1,7 @@
 ---
 title: "La presse en parle : Ce bailleur social doit récupérer plus d'un million
   d'euros pour régulariser les charges"
-date: 2024-02-10T16:23:00.000+01:00
+date: 2024-02-20T16:23:00.000+01:00
 ---
 La presse en parle !
 
