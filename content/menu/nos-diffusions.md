@@ -5,6 +5,8 @@ weight: 6
 ---
 Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des locataires des groupes où il est présent :
 
+
+* [Locataires de la RIVP, Exigez le maintien de l'ouverture des loges les samedis matin les vendredis après-midi](/uploads/BAT-SLC-Tract-210X297-LOGES-RIVP-Octobre-2023.pdf) (Octobre 2023)
 * [Halte aux charges d'ascenseurs indûment facturées !](/uploads/Tract-PH-octobre-2014vF.pdf)  (Octobre 2014)
 * [Travaux de rénovation et "Plan Climat" : exigez le respect de vos droits](/uploads/tract-Plan-Climat-septembre-2014.pdf) (Septembre 2014)
 * [Utilisation des données de l'enquête d'occupation à Paris Habitat - Réagissez !](/uploads/Tract-PH-suite-enquete-OPS.pdf) (Juin 2014)
