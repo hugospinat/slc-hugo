@@ -1,11 +1,13 @@
 ---
-title: "Nos communiqués"
+title: Nos communiqués
 menu: main
 weight: 7
 ---
 
 Le SLC-CSF fait paraître régulièrement, des **communiqués de presse :**
 
+
+- [Pour la protection des consommateurs, NON à la suppression de l'Institut National de la consommation](/uploads/non-à-la-suppression-del-inc.jpg) (Octobre 2025)
 - [Le SLC-CSF lance la première action de groupe en matière de charges locatives](/uploads/CP-ActionGroupe-20141008-VF2.pdf) (Octobre 2014)
 - [Gel de l’APL : La CSF refuse que l’on fasse des économies sur le dos des plus modestes](/post/la-csf-refuse-que-lon-fasse-des-economies-sur-le-dos-des-plus-modestes "Gel de l’APL : La CSF refuse que l’on fasse des économies sur le dos des plus modestes") (Octobre 2013)
 - [Paris Habitat : 1,650 millions d’euros de pénalités appliquées aux ascensoristes ;  150 000 euros restitués aux locataires !](/uploads/ComPressFAL2010.pdf) (Septembre 2010)
