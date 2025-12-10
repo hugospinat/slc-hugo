@@ -14,6 +14,6 @@ Vous désirez créer une association, vous pouvez nous joindre à l’adresse su
 *Par téléphone*\
 Vous pouvez nous contacter au **06 30 688 270** numéro unique, à nos horaires de permanences téléphoniques :
 
-> **Les mardis et vendredi de 9h30 à 11h30**
+> **Les mardis et vendredi de 10h00 à 12h00**
 
-*Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité le bilan de l’activité lié à la permanence. Les données sont conservées 3 ans.* *Conformément au règlement européen n°2016/679 et à la loi n°78-17 du 6 janvier 1978 modifiée, vous pouvez exercer votre droit d’interrogation, d’accès, de portabilité, de verrouillage, de rectification, d’effacement, de limitation ou d’opposition des données vous concernant. Ces droits s’exercent par courriel adressé à* *[info-slc.asso.fr](mailto:dpo@nanterre-coop-habitat.fr)* *ou par courrier postal adressé à : SLC-CSF – 11 rue du Borrégo – 75020 Paris.*
+*Le SLC-CSF, responsable du traitement, met en œuvre un traitement de données à caractère personnel ayant pour finalité le bilan de l’activité lié à la permanence. Les données sont conservées 3 ans.* *Conformément au règlement européen n°2016/679 et à la loi n°78-17 du 6 janvier 1978 modifiée, vous pouvez exercer votre droit d’interrogation, d’accès, de portabilité, de verrouillage, de rectification, d’effacement, de limitation ou d’opposition des données vous concernant. Ces droits s’exercent par courriel adressé à* *[info-slc.asso.fr](mailto:dpo@nanterre-coop-habitat.fr)* *ou par courrier postal adressé à : SLC-CSF – 11 rue du Borrego – 75020 Paris.*
