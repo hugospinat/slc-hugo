@@ -5,7 +5,7 @@ weight: 6
 ---
 Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des locataires des groupes où il est présent :
 
-* [Paris Habitat a décidé de fermer plus tôt les loges des gardiens SANS AUCUNE CONCERTATION PREALABLE avec les organisations représentatives des locataires](/uploads/BAT-SLC-Tract-210X297-LOGES-RIVP-Octobre-2023.pdf) (Février 2026)
+* [Paris Habitat a décidé de fermer plus tôt les loges des gardiens SANS AUCUNE CONCERTATION PREALABLE avec les organisations représentatives des locataires](static/uploads/tract-horaires-gardiens-ph-2026.pdf) (Février 2026)
 * [Locataires de la RIVP, Exigez le maintien de l'ouverture des loges les samedis matin les vendredis après-midi](/uploads/BAT-SLC-Tract-210X297-LOGES-RIVP-Octobre-2023.pdf) (Octobre 2023)
 * [Halte aux charges d'ascenseurs indûment facturées !](/uploads/Tract-PH-octobre-2014vF.pdf)  (Octobre 2014)
 * [Travaux de rénovation et "Plan Climat" : exigez le respect de vos droits](/uploads/tract-Plan-Climat-septembre-2014.pdf) (Septembre 2014)
