@@ -63,7 +63,7 @@ Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien �
 
 [Remboursement de charges Groupe Paris Habitat Platre 2025](/uploads/ph-platre-2025.png)
 
-[Remboursement de charges Groupe Paris Habitat Poissonnière 2023](/uploads/poissonniere-2023.png)
+[Remboursement de charges Groupe Paris Habitat Poissonnière 2023](/uploads/poissoniere-2023.png)
 
 
 
