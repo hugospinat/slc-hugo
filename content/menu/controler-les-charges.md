@@ -35,3 +35,6 @@ Tous les ans, les responsables des associations SLC-CSF de locataires procèdent
 La spécificité du SLC-CSF est de disposer d’une **base de données des charges locatives** qui aujourd’hui capitalise des informations sur plus de 20 ans et plus de 20 000 logements parisiens. Cet outil réactualisé tous les ans permet au SLC-CSF et à ses associations d’avoir des éléments de référence, leur conférant une très grande efficacité lors des contrôles de charges.
 
 Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien ” représente, à part égale, 85 % du total des charges. Ce sont donc les deux principaux postes qu’il faut suivre de très près, lors des contrôles annuels car ils peuvent être générateurs de nombreux contentieux.
+
+
+[Remboursement de charges Groupe RIVP Algérie 2022](<static/uploads/rivp-algerie-2022.pdf>) (Octobre 2025)
