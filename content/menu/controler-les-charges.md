@@ -48,3 +48,8 @@ Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien �
 [Remboursement de charges Groupe Paris Habitat Escaliers du 13 2025](/uploads/ph escaliers 13 2025.png)
 [Remboursement de charges Groupe Paris Habitat Eoiles du 12 2025](/uploads/ph etoiles 12 2023.png)
 [Remboursement de charges Groupe Paris Habitat Fessart 2023](/uploads/ph fessart 2023.png)
+[Remboursement de charges Groupe Paris Habitat Lamarck 2025](/uploads/ph lamarck 2025.png)
+[Remboursement de charges Groupe Paris Habitat Platre 2025](/uploads/ph platre 2025.png)
+[Remboursement de charges Groupe Paris Habitat Poissonnière 2023](/uploads/poissonniere 2023.png)
+
+
