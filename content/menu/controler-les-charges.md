@@ -37,4 +37,4 @@ La spécificité du SLC-CSF est de disposer d’une **base de données des charg
 Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien ” représente, à part égale, 85 % du total des charges. Ce sont donc les deux principaux postes qu’il faut suivre de très près, lors des contrôles annuels car ils peuvent être générateurs de nombreux contentieux.
 
 
-[Remboursement de charges Groupe RIVP Algérie 2022](/uploads/rivp-algerie-2022.pdf) (Octobre 2025)
+[Remboursement de charges Groupe RIVP Algérie 2025](/uploads/algerie-2025.png) (Octobre 2025)
