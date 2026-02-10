@@ -28,7 +28,7 @@ Il faut pour cela contrôler que :\
 
 Il convient aussi de consulter les contrats (durée, coût, contenu...) Pour effectuer un contrôle rigoureux, il est nécessaire d’analyser les différents postes de charges : chauffage, entretien, eau chaude, eau froide, ascenseurs …
 
-***Le SLC et le contrôle de charges***
+***Le SLC-CSF et le contrôle de charges***
 
 Tous les ans, les responsables des associations SLC-CSF de locataires procèdent au contrôle des charges locatives, avec l’aide des responsables du Syndicat.
 
