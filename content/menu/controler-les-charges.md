@@ -41,7 +41,7 @@ Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien �
 
 [Remboursement de charges Groupe RIVP Lesseps 2025](/uploads/lesseps-2025.png) 
 
-[Remboursement de charges Groupe Paris Habitat ALCA 2025](/uploads/ph alca 2025.png) 
+[Remboursement de charges Groupe Paris Habitat ALCA 2025](/uploads/ph-alca-2025.png) 
 
 [Remboursement de charges Groupe RIVP Lesseps 2024](/uploads/lesseps-2024.png) 
 
@@ -49,7 +49,7 @@ Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien �
 
 [Remboursement de charges Groupe RIVP Nationale 2021](/uploads/nationale-2021.png)
 
-[Remboursement de charges Groupe Paris Habitat Breguet 2023](/uploads/ph breguet 2023.png)
+[Remboursement de charges Groupe Paris Habitat Breguet 2023](/uploads/ph_breguet_2023.png)
 
 [Remboursement de charges Groupe Paris Habitat Dulaure 2023](/uploads/ph-durlaure-2023.png)
 
