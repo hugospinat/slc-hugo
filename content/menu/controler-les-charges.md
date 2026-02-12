@@ -36,6 +36,12 @@ La spécificité du SLC-CSF est de disposer d’une **base de données des charg
 
 Actuellement, l’ensemble des deux postes “ Chauffage ” et “ Entretien ” représente, à part égale, 85 % du total des charges. Ce sont donc les deux principaux postes qu’il faut suivre de très près, lors des contrôles annuels car ils peuvent être générateurs de nombreux contentieux.
 
+Régulièrement des anomalies sont relevées lors du contrôle des charges, et le SLC-CSF en informe le bailleur pour exiger les remboursements des charges indûment payées par les locataires. 
+Si le montant des remboursements est conséquent (plusieurs dizaines d’euros par locataire), le remboursement apparaîtra sur l’avis d’échéance des locataires. 
+Sinon, ces remboursements sont intégrés directement dans la régularisation de charges de l’exercice suivant, qui seront ainsi moins élevés.
+Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) aux locataires concernés par des remboursements.
+
+
 [Remboursement de charges Groupe Paris Habitat Escaliers du 13 2025](/uploads/ph-escaliers-13-2025.png)
 
 [Remboursement de charges Groupe RIVP Algérie 2025](/uploads/algerie-2025.png) 
