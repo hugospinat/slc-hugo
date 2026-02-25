@@ -41,6 +41,9 @@ Si le montant des remboursements est conséquent (plusieurs dizaines d’euros p
 Sinon, ces remboursements sont intégrés directement dans la régularisation de charges de l’exercice suivant, qui seront ainsi moins élevés.
 Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) aux locataires concernés par des remboursements.
 
+
+[Remboursement de charges Groupe Elogie Siemp 228 Courcelles 2026] (/uploads/es-courcelles-2026.png)
+
 [Remboursement de charges Groupe Paris Habitat 118-120bis Haxo 2026] (/uploads/ph-120haxo-2026.png)
 
 [Remboursement de charges Groupe Paris Habitat Escaliers du XIII 2025](/uploads/ph-escaliers-13-2025.png)
