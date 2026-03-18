@@ -37,4 +37,4 @@ Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des lo
 * [Elections à l’OPAC de PARIS : Forte progression du SLC](/uploads/RemOPAC.pdf) (Janvier 2003)
 * [Les résultats des élections à la RIVP](http://www.slc.asso.fr/RemRIVP.pdf) (Janvier 2003)
 * [Les résultats des élections à la SIEMP](http://www.slc.asso.fr/RemSIEMP.pdf) (Janvier 2003)
-* [Charges locatives “ gardiens ”](http://www.slc.asso.fr/TractGardiens2002.pdf) (Octobre 2002)
+* [Charges locatives “ gardiens ”](http://www.slc.asso.fr/tract-charges-gardiens-oct2022.pdf) (Octobre 2002)
