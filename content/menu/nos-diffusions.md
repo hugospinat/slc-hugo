@@ -38,3 +38,4 @@ Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des lo
 * [Les résultats des élections à la RIVP](/uploads/RemRIVP.pdf) (Janvier 2003)
 * [Les résultats des élections à la SIEMP](/uploads/RemSIEMP.pdf) (Janvier 2003)
 * [Charges locatives “ gardiens ”](/uploads/tract-charges-gardiens-oct2022.pdf) (Octobre 2002)
+* [Charges locatives “ gardiens ”](/uploads/tract-charges-gardiens-avril2001.pdf) (Octobre 2002)
