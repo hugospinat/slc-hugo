@@ -66,6 +66,8 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 
 [Remboursement de charges Groupe Paris Habitat ALCA 2025](/uploads/ph-alca-2025.png) 
 
+[Remboursement de charges Groupe Paris Habitat Faubourg Poissonnière 2025](/uploads/rembt-ch-rivp-fg-poissonniere-2025.png)
+
 [Remboursement de charges Groupe RIVP Lesseps 2024](/uploads/lesseps-2024.png) 
 
 [Remboursement de charges Groupe Paris Habitat Fessart 2023](/uploads/ph-fessart-2023.png)
