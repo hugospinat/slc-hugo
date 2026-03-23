@@ -64,6 +64,8 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 
 [Remboursement de charges Groupe Paris Habitat Platre 2025](/uploads/ph-platre-2025.png)
 
+[Remboursement de charges Groupe Paris Habitat Breguet 2025](/uploads/rembt-ph-breguet-2025.png)
+
 [Remboursement de charges Groupe Paris Habitat ALCA 2025](/uploads/ph-alca-2025.png) 
 
 [Remboursement de charges Groupe Paris Habitat Mainguet Lepeu 2025](/uploads/rembt-ph-mainguet-2025.png)
