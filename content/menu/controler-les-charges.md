@@ -52,7 +52,7 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 
 [Remboursement de charges Groupe Paris Habitat Escaliers du XIII 2025](/uploads/ph-escaliers-13-2025.png)
 
-[Remboursement de charges Groupe Paris Habitat Fessart2025](/uploads/rembt-ch-fessart-2025.png)
+[Remboursement de charges Groupe Paris Habitat Fessart 2025](/uploads/rembt-ch-fessart-2025.png)
 
 [Remboursement de charges Groupe RIVP Algérie 2025](/uploads/algerie-2025.png) 
 
