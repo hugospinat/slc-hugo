@@ -68,7 +68,9 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 
 [Remboursement de charges Groupe Paris Habitat Mainguet Lepeu 2025](/uploads/rembt-ph-mainguet-2025.png)
 
-[Remboursement de charges Groupe Paris Habitat Faubourg Poissonnière 2025](/uploads/rembt-ch-rivp-fg-poissonniere-2025.png)
+[Remboursement de charges Groupe RIVP Belleville 2025](/uploads/rembt-rivp-belleville-2025.png)
+
+[Remboursement de charges Groupe RIVP Faubourg Poissonnière 2025](/uploads/rembt-ch-rivp-fg-poissonniere-2025.png)
 
 [Remboursement de charges Groupe RIVP Lesseps 2024](/uploads/lesseps-2024.png) 
 
