@@ -52,7 +52,7 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 
 [Remboursement de charges Groupe RIVP Lesseps 2025](/uploads/lesseps-2025.png) 
 
-[Remboursement de charges Groupe Paris Habitat Eoiles du 12 2025](/uploads/ph-etoile-12-2023.png)
+[Remboursement de charges Groupe Paris Habitat Etoiles du 12 2025](/uploads/ph-etoile-12-2023.png)
 
 [Remboursement de charges Groupe Paris Habitat Lamarck 2025](/uploads/ph-lamarck-2025.png)
 
