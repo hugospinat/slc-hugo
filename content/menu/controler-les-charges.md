@@ -48,6 +48,8 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 
 [Remboursement de charges Groupe Paris Habitat Murat Fantin Latour 2025](/uploads/rembt-ch-murat-2025.png)
 
+[Remboursement de charges Groupe Paris Habitat Dulaure 2025](/uploads/rembt-ch-dulaure-2025.png)
+
 [Remboursement de charges Groupe Paris Habitat Escaliers du XIII 2025](/uploads/ph-escaliers-13-2025.png)
 
 [Remboursement de charges Groupe RIVP Algérie 2025](/uploads/algerie-2025.png) 
