@@ -41,7 +41,7 @@ Si le montant des remboursements est conséquent (plusieurs dizaines d’euros p
 Sinon, ces remboursements sont intégrés directement dans la régularisation de charges de l’exercice suivant, qui seront ainsi moins élevés.
 Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) aux locataires concernés par des remboursements.
 
-[Remboursement de charges Groupe RIVP Loc'Ass Saint Fargeau 2026](/uploads/uploads/rivp-locass-2024.png)
+[Remboursement de charges Groupe RIVP Loc'Ass Saint Fargeau 2026](/uploads/rivp-locass-2024.png)
 
 [Remboursement de charges Groupe RIVP Chemin Vert 2026](/uploads/rivp-chemin-vert-2024.png)
 
