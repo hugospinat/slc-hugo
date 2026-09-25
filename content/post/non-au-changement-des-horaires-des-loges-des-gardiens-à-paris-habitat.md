@@ -6,6 +6,3 @@ Paris Habitat a décidé de fermer plus tôt les loges des gardiens SANS AUCUNE 
 
 [Consulter le tract](/uploads/tract-horaires-gardiens-ph-2026.pdf)
 
-[](/uploads/tract-horaires-gardiens-ph-2026.pdf)
-
-![](/uploads/tract-horaires-gardiens-ph-2026-1.png)
