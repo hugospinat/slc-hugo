@@ -6,4 +6,4 @@ date: 2026-09-28T14:25:00.000+02:00
 
 Comment voter aux élections HLM de représentants des locataires ?
 
-``<https://vimeo.com/1218255815?share=copy&fl=cl&fe=ci>
+[La vidéo]``<https://vimeo.com/1218255815?share=copy&fl=cl&fe=ci>
