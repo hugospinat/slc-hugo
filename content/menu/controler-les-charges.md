@@ -41,6 +41,8 @@ Si le montant des remboursements est conséquent (plusieurs dizaines d’euros p
 Sinon, ces remboursements sont intégrés directement dans la régularisation de charges de l’exercice suivant, qui seront ainsi moins élevés.
 Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) aux locataires concernés par des remboursements.
 
+[Remboursement de charges Groupe RIVP Vincennes 2026](/uploads/vincennes-tract-rembt-charges-2026.png)
+ 
 [Remboursement de charges Groupe PH Jaurès 2026](/uploads/ph-jaures-2026.png)
 
 [Remboursement de charges Groupe PH Murat Fantin Latour 2026](/uploads/ph-murat-fl-2026.png)
@@ -94,9 +96,3 @@ Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) au
 [Remboursement de charges Groupe RIVP Nationale 2022](/uploads/nationale-2022.png)
 
 [Remboursement de charges Groupe RIVP Nationale 2021](/uploads/nationale-2021.png)
-
-
-
-
-
-
