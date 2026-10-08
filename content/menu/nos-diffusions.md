@@ -3,7 +3,7 @@ title: Nos diffusions
 menu: main
 weight: 6
 ---
-Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des locataires des groupes où il est présent :
+Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des locataires :
 
 * [Lors de contrôles des charges locatives, le SLC-CSF a contesté la récupération par Elogie Siemp d’une part de la taxe d’Enlèvement des Ordures Ménagères auprès des locataires d'habitation car la part correspondant aux emplacements de stationnement n’était pas déduite.](/uploads/tract-teom.png) (Septembre 2026)
 * [Le SLC conteste la récupération auprès des locataires d’une partie des charges liées à la rémunération des gardiens de la RIVP.](/uploads/tract-rivp-charges-en-image.png) (Juin 2026)
