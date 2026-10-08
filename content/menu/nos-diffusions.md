@@ -5,6 +5,8 @@ weight: 6
 ---
 Le SLC-CSF diffuse régulièrement des **tracts d’information** auprès des locataires des groupes où il est présent :
 
+* [Lors de contrôles des charges locatives, le SLC-CSF a contesté la récupération par Elogie Siemp d’une part de la taxe d’Enlèvement des Ordures Ménagères auprès des locataires d'habitation car la part correspondant aux emplacements de stationnement n’était pas déduite.](/uploads/tract-teom.png)
+* [Le SLC conteste la récupération auprès des locataires d’une partie des charges liées à la rémunération des gardiens de la RIVP.] (/uploads/tract-rivp-charges-en-image.png)
 * [Paris Habitat a décidé de fermer plus tôt les loges des gardiens SANS AUCUNE CONCERTATION PREALABLE avec les organisations représentatives des locataires](/uploads/tract-horaires-gardiens-ph-2026.pdf) (Février 2026)
 * [Locataires de la RIVP, Exigez le maintien de l'ouverture des loges les samedis matin les vendredis après-midi](/uploads/BAT-SLC-Tract-210X297-LOGES-RIVP-Octobre-2023.pdf) (Octobre 2023)
 * [Halte aux charges d'ascenseurs indûment facturées !](/uploads/Tract-PH-octobre-2014vF.pdf)  (Octobre 2014)
