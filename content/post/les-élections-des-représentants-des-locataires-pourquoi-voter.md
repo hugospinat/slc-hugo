@@ -1,6 +1,6 @@
 ---
 title: "Les élections des représentants des locataires : Pourquoi voter ?"
-date: 2026-10-16T09:58:00.000+02:00
+date: 2026-10-16T10:02:00.000+02:00
 ---
 En 2026, comme tous les 4 ans, les locataires des logements sociaux vont être appelés à élire leurs représentants aux Conseils d’Administration des bailleurs sociaux.
 
