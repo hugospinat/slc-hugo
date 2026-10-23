@@ -5,4 +5,4 @@ categories:
   - defaut
 ---
 
-Soutenez l'action du  SLC-CSF en votant : [ICI](https://parishabitat.eklesio.fr)   // consultez la [Profession de foi SLC-CSF](/uploads/profdefoi_parishabitat_recyclage-validé.pdf)
+Soutenez l'action du  SLC-CSF en votant : [ICI](https://parishabitat.eklesio.fr)   // consultez la [Profession de foi SLC-CSF pour Paris Habitat](/uploads/profdefoi_parishabitat_recyclage-validé.pdf)
