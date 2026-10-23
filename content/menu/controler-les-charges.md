@@ -41,6 +41,8 @@ Si le montant des remboursements est conséquent (plusieurs dizaines d’euros p
 Sinon, ces remboursements sont intégrés directement dans la régularisation de charges de l’exercice suivant, qui seront ainsi moins élevés.
 Vous trouverez ci-dessous des exemples d’information (diffusée par le SLC) aux locataires concernés par des remboursements.
 
+[Remboursement de charges Groupe PH 120 Haxo 2026](/uploads/tract-remboursement-119hb-charges-2024.pdf)
+
 [Remboursement de charges Groupe RIVP Vincennes 2026](/uploads/vincennes-tract-rembt-charges-2026.png)
  
 [Remboursement de charges Groupe PH Jaurès 2026](/uploads/ph-jaures-2026.png)
